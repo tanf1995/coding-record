@@ -11,3 +11,6 @@ yarn.lock
 # book
 *.pdf
 电子书/
+
+# git
+.git/
