@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>audio2</h2>
+    
+    <audio autoplay loop id="pa" controls>
+        <source src="儿童歌曲 - 卖汤圆 .mp3">
+    </audio>
+
+    <script>
+        // chrome
+        window.addEventListener('load', function () {
+            var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            var source = audioCtx.createBufferSource();
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'maitangyuan.mp3');
+            xhr.responseType = 'arraybuffer';
+            xhr.addEventListener('load', function (r) {
+                audioCtx.decodeAudioData(
+                        xhr.response,
+                        function (buffer) {
+                            source.buffer = buffer;
+                            source.connect(audioCtx.destination);
+                            source.loop = false;
+                        });
+                source.start(0);
+            });
+            xhr.send();
+        });
+
+        // sofia
+        // window.onload = function(){
+        //     document.addEventListener('click', function(){
+        //         document.querySelector('#pa').play();
+        //         document.querySelector('h2').innerHTML = "click";
+        //     })
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="b1">b1</button>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+    <br>
+
+    <button id="b2">b2</button>
+    <div id="box" OnClick="alert(1)">123</div>
+
+    <script>
+        document.querySelector('#b1').onclick = function(){
+            document.querySelector('textarea').innerHTML = `
+                <img src="@" onerror=alert(1) />
+            `
+            console.log(document.querySelector('textarea').innerHTML)
+        }
+        document.querySelector('#b2').onclick = function(){
+            document.querySelector('#box').innerHTML = `
+                <img src="@" onerror=alert(1) />
+            `
+        }
+    </script>
+</body>
+</html>

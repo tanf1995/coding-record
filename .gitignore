@@ -1,0 +1,13 @@
+# 
+*.mkv
+*.mp3
+
+# npm backpage
+node_modules/
+
+# project
+yarn.lock
+
+# book
+*.pdf
+电子书/

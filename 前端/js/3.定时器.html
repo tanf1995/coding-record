@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btn">start</button>
+    <div id="timer"></div>
+
+    <script>
+        document.addEventListener('click', function(){
+            var times = 10;
+            var timer = setInterval(function(){
+                document.querySelector('#timer').innerHTML = times;
+                times--;
+                if(times < 0){
+                    clearInterval(timer);
+                }
+            }, 1000);
+            alert('success!');
+        }, false)
+    </script>
+</body>
+</html>

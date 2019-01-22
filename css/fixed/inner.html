@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .content{
+            height: 800px;
+            background-color: bisque;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .alert{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .info{
+            width: 150px;
+            height: 150px;
+            background-color: brown;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="content">
+        hello
+        <br><br><br><br><br><br>
+    </div>
+
+    <div class="alert">
+        <div class="info"></div>
+    </div>
+
+    <script>
+        window.onload = function(){
+            var alert = document.querySelector('.alert');
+            var info_box = document.querySelector('.info');
+
+            adjust_pos();
+            document.addEventListener('touchmove', function(e){
+                adjust_pos();
+            }, false)
+            info_box.addEventListener('touchstart', function(){
+                alert.style.display = 'none';
+            })
+
+            function adjust_pos(){
+                var view_height = window.top.innerHeight;
+                var top_pos = window.top.scrollY;
+
+                info_box.style.top = view_height/2 + top_pos + 'px';
+            }
+        }
+    </script>
+</body>
+</html>

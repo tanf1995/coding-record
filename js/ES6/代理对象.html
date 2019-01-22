@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var proxy = {
+            apply: (target, thisArg, args) => {
+                console.log("create element " + args);
+                return target.apply(thisArg, args);
+            }
+        }
+        document.createElement = new Proxy(document.createElement, proxy);
+    </script>
+    <script>
+        var img = document.createElement("img");
+        img.setAttribute("src", "xxx.jpg");
+        document.body.appendChild(img);
+
+        try{
+            document.createElement.toString();
+        }catch(e){
+            console.log("has proxy");
+        }
+    </script>
+</body>
+</html>

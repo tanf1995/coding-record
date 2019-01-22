@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let time = new Date();
+        let times = 0;
+        let current_time = time.valueOf();
+        const func = () => {
+            let time = new Date();
+            console.log("timestamp: ", time.valueOf() - current_time);
+        }    
+
+        var timer1 = setInterval(() => {
+            func();
+            times++;
+            if(times >= 10){
+                clearInterval(timer1);
+            }
+        }, 1000)
+    </script>
+</body>
+</html>

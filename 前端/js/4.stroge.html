@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="remove">remove storage</button>
+    
+    <script>
+        console.log(localStorage.getItem('name'));
+        localStorage.setItem('name', "tf");    
+
+        document.querySelector('#remove').addEventListener('click', function(){
+            localStorage.removeItem('name');
+        })
+    </script>
+</body>
+</html>

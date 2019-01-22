@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <iframe 
+        src="http://172.18.188.167:8080/inner.html" 
+        frameborder="1"
+        id="inner"
+    ></iframe>
+
+    <script>
+        window.addEventListener("message", function(e){
+            console.log(e.data);
+            e.source.postMessage(document.body.innerHTML, "*");
+        })
+
+        var inner = document.querySelector("#inner");
+        inner.contentWindow = Object.assign({}, window, inner.contentWindow);
+        console.log(inner.contentWindow);
+    </script>
+</body>
+</html>

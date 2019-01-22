@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 50px;
+            height: 50px;
+            background-color: aquamarine;
+            position: absolute;
+            top: 20px;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="box" style="left: 0"></div>
+
+    <script>
+        var box = document.querySelector('#box');
+
+        document.addEventListener('click', function(){
+            move(box, 150);
+        })
+
+        function move(ele, dis){
+            // 
+            var timer = setInterval(() => {
+                var step = (dis - parseInt(ele.style.left)) / 15;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if(step === 0){
+                    clearInterval(timer);
+                }
+                ele.style.left = parseInt(ele.style.left) + step + 'px';
+            }, 15)
+        }
+    </script>
+</body>
+</html>

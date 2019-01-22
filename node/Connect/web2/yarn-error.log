@@ -1,0 +1,35 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\pc\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\pc\AppData\Local\Yarn\bin;C:\Users\pc\AppData\Local\Yarn\Data\global\node_modules;C:\Users\pc\AppData\Local\Microsoft\WindowsApps;;D:\Microsoft VS Code\bin;C:\Users\pc\AppData\Roaming\npm;D:\Program Files\Fiddler2
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  10.13.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: D:\work\study\node\Connect\web2\package.json: Unexpected token } in JSON at position 53
+      at JSON.parse (<anonymous>)
+      at C:\Users\pc\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1631:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\pc\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:304:30)
+      at C:\Users\pc\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:315:13
+
+npm manifest: 
+  {
+      "name": "my-web",
+      "version": "0.0.1",
+      
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

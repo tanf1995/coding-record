@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #data_box{
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+        }
+        #rev{
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="data_box">
+        hello
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <div id="rev">
+
+    </div>
+
+    <script>
+        var data_box = document.querySelector("#data_box");
+        var rev = document.querySelector("#rev");
+
+        data_box.addEventListener('dragstart', function(e){
+            e.dataTransfer.setData('content', data_box.innerHTML);
+            console.log("start");
+            console.log(e.dataTransfer);
+        })
+        data_box.addEventListener('dragend', function(e){
+            console.log(e.dataTransfer.getData("content"));
+            console.log("end");
+            console.log(e.dataTransfer);
+        })
+
+        rev.addEventListener('dragenter', function(){
+            console.log("enter");
+        })
+        rev.addEventListener('dragover', function(){
+            console.log("over");
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span{
+            background-color: red;
+            width: 50px;
+            padding-right: 20px;
+        }
+        #box{
+            width: 150px;
+            height: 150px;
+            border: 1px solid #000;
+        }
+        #box:hover{
+            height: 300px;
+            color: bisque;
+        }
+
+        #link{
+            color: #000
+        }
+        #link:visited{
+            color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    
+    <span id="s1">
+        hello
+    </span>
+
+    <div id="box">
+        564651321
+    </div>
+
+    <a href="http://baidu.com" id="link">百度</a>
+
+    <script>
+        var s1 = document.querySelector('#s1');
+
+        console.log(window.getComputedStyle(s1, null).width);
+        console.log(s1.offsetWidth)
+
+
+        var box = document.querySelector('#box');
+        box.onmouseenter = function(){
+            console.log(window.getComputedStyle(box, null).height);
+            console.log(window.getComputedStyle(box, 'hover').height);
+            console.log(window.getComputedStyle(box, null).getPropertyValue('color'));
+            console.log(window.getComputedStyle(box, 'hover').getPropertyValue('color'));
+        }
+        box.onmouseleave = function(){
+            console.log(window.getComputedStyle(box, null).height);
+            console.log(window.getComputedStyle(box, 'hover').height);
+            console.log(window.getComputedStyle(box, null).getPropertyValue('color'));
+            console.log(window.getComputedStyle(box, 'hover').getPropertyValue('color'));
+        }
+
+        var link = document.querySelector('#link');
+        link.onmouseenter = function(){
+            console.log(window.getComputedStyle(link, null).height);
+            console.log(window.getComputedStyle(link, 'hover').height);
+            console.log(window.getComputedStyle(link, null).getPropertyValue('color'));
+            console.log(window.getComputedStyle(link, 'hover').getPropertyValue('color'));
+        }
+        link.onmouseleave = function(){
+            console.log(window.getComputedStyle(link, null).height);
+            console.log(window.getComputedStyle(link, 'hover').height);
+            console.log(window.getComputedStyle(link, null).getPropertyValue('color'));
+            console.log(window.getComputedStyle(link, 'hover').getPropertyValue('color'));
+        }
+    </script>
+</body>
+</html>

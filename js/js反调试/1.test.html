@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        console.log_ = console.log;
+        console.log = function(msg){
+            console.log_("msg record: ", msg);
+            console.log_(msg);
+        }
+
+
+        console.log("ss");
+
+        console.log_(console);
+    </script>
+</body>
+</html>

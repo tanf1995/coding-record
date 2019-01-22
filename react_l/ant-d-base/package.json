@@ -1,0 +1,19 @@
+{
+  "name": "ant-d-base",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "tf",
+  "license": "MIT",
+  "scripts": {
+    "dev": "umi dev",
+    "build": "umi build"
+  },
+  "devDependencies": {
+    "umi": "^2.2.9",
+    "umi-plugin-react": "^1.2.4"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "mockjs": "^1.0.1-beta3"
+  }
+}

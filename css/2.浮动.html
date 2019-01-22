@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .news{
+            border: 1px solid #000;
+        }
+        .news img{
+            float: left;
+        }
+        .news p{
+            float: right;
+        }
+        .clearfix::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="news clearfix">
+        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4013648726,996720222&fm=26&gp=0.jpg" alt="">
+        <p>hello world</p>
+    </div>
+
+    <p>p tag</p>
+</body>
+</html>

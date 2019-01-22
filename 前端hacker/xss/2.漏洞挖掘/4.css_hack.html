@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Visited</h2>
+    <ul id="visited"></ul>
+    <h2>not visited</h2>
+    <ul id="not_visited"></ul>
+
+    <script>
+        // 已失效
+        var sites = [
+            "https://www.baidu.com",
+            "https://www.google.com",
+            "http://www.sina.com.cn",
+            "https://www.qq.com",
+            "https://www.taobao.com",
+            "http://www.weibo.com"
+        ];
+        var style = document.createElement('style');
+        document.head.appendChild(style);
+        sites.forEach((item, index) => {
+            var link = document.createElement('a');
+            link.id = "id" + index;
+            link.href = item;
+            link.innerHTML = item;
+            style.innerHTML += `
+                #id${index}:visited{
+                    color: #ff0000;
+                }
+            `;
+            document.body.appendChild(link);
+            var color = window.getComputedStyle(link, "visited").getPropertyValue('color');
+            console.log(window.getComputedStyle(link, null).getPropertyValue('color'))
+            console.log(color);
+            document.body.removeChild(link);
+            if(color == 'rgb(255, 0, 0)'){
+                var item = document.createElement('li');
+                item.appendChild(link);
+                document.getElementById('visited').appendChild(item);
+            }else{
+                var item = document.createElement('li');
+                item.appendChild(link);
+                document.getElementById('not_visited').appendChild(item);
+            }
+        })
+    </script>
+</body>
+</html>

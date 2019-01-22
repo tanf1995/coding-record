@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #rev{
+            width: 150px;
+            height: 100px;
+            margin-top: 150px;
+        }
+        #source{
+            padding: 10px;
+            background-color: aquamarine;
+        }
+        #inner{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="source">
+        <iframe 
+            src="http://172.18.188.167:8080/inner.html"
+            frameborder="1"
+            id="inner"
+        ></iframe>
+        asddwq
+    </div>
+
+    <div id="exam">
+        hello world
+    </div>
+
+    <input type="text" id="rev" id="rev" value="sdqoinkjasndb">
+
+    <br><br><br>
+
+    <button onclick="console.log(window.getSelection().toString());">show select</button>
+
+    <script>
+        var inner = document.querySelector("#inner");
+        var rev = document.querySelector('#rev');
+        var source = document.querySelector("#source");
+        var show_data = document.querySelector("#show_data");
+
+        source.addEventListener('dragstart', function(){
+            console.log("start");
+        })
+
+        // source.addEventListener('click', function(){
+        //     selection = window.getSelection();        
+        //     range = document.createRange();
+        //     // range.selectNodeContents(source);
+        //     range.selectNodeContents(document.querySelector("#exam"));
+        //     selection.removeAllRanges();
+        //     selection.addRange(range);
+        //     console.log(window.getSelection().toString());
+        // })
+
+        document.addEventListener('keydown', function(e){
+            // console.log(window.getSelection().toString());
+            // window.clipboardData.setData("Text", "Hello");
+            console.log(e.keyCode);
+            if(e.keyCode === 65){
+
+            }else if(e.keyCode === 66){
+                console.log(window.getSelection().toString());
+            }
+        })
+    </script>
+</body>
+</html>

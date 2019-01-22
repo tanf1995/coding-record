@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>   
+        let li = [];
+
+        for(var i=0;i<100;i++){
+            li.push("some words. " + i.toString());
+        }
+
+        console.log(li.length);
+        function fet(n){
+            return new Promise((resolve, reject) => {
+                n%2 !== 0 ? resolve() : reject();
+            })
+        }
+
+        li.forEach( (item, index) => {
+            fet(index)
+            .then(
+                () => {
+                    setTimeout(() => { console.log(item) }, 6000);
+                }
+            )
+            .catch(
+                () => {
+                    console.log(item);
+                }
+            )
+        } )
+    </script>
+</body>
+</html>

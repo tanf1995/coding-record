@@ -1,0 +1,25 @@
+1. loader
+
+style-loader css-loader file-loader
+
+2. plugin
+
+html-webpack-plugin  # 初始模板
+
+clean-webpack-plugin  # 清理打包文件
+
+webpack-manifest-plugin  # 管理文件输出
+
+3. dev-server
+
+webpack-dev-server
+
+4.热模块替换
+
+webpack.NamedModulesPlugin
+
+webpack.HotModuleReplacementPlugin
+
+5. 副作用  - sideEffects
+
+例如module样式表导入的样式存在副作用

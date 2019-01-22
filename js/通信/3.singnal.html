@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <iframe src="http://127.0.0.1:5500/js/通信/2.pm2.html" id="child"></iframe>
+    </div>
+
+    <script>
+        window.top.addEventListener('message', function(event){
+            console.log(event.data);
+        }, false)
+    </script>
+
+
+    <script>
+        var child = document.querySelector("#child");
+
+        child.contentWindow.postMessage("hello", "*");
+    </script>
+</body>
+</html>

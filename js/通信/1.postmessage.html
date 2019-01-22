@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>window.postMessage</title>
+	
+</head>
+<body>
+	<div class="parent" >
+			<iframe src="2.pm2.html" id="iframe"></iframe>
+		</div>
+ 
+	<script type="text/javascript">
+		function receiveMessage(event){
+			console.log(event.data);
+		}
+
+		window.addEventListener("message", receiveMessage, false);
+		
+	</script>
+</body>
