@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
+            position: absolute;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="box"></div>
+
+    <script>
+        var start = null;
+        var element = document.getElementById('box');
+        var start_time = (new Date).getTime();
+
+        // function ani(){
+        //     var current_time = (new Date).getTime();
+        //     if(current_time - start_time < 3000){
+        //         element.style.left = parseInt(element.style.left) + 1 + "px";
+        //         console.log(element.style.left);
+        //         window.requestAnimationFrame(ani);
+        //     }
+        // }
+
+        // console.log(start_time);
+        // console.log(element.offsetLeft);
+        // element.style.left = element.offsetLeft + 'px';
+        // window.requestAnimationFrame(ani);
+    </script>
+</body>
+</html>
