@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .triangle{
+            border-left: 50px solid #000;
+            border-right: 50px solid #333;
+            border-top: 50px solid #666;
+            border-bottom: 50px solid #999;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+
+        .triangle2{
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid #999;
+            float: left;
+        }
+
+        .triangle3{
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 70px solid #999;
+            float: left;
+        }
+
+        .msg{
+            width: 200px;
+            height: 80px;
+            border: 1px solid #999;
+            line-height: 80px;
+            text-align: center;
+            margin-left: 80px;
+            position: relative;
+            border-radius: 10px;
+            /* background-color: #fff;
+            filter: drop-shadow(0 0 2px #999); */
+            box-shadow: 0 0 2px #999;
+        }
+        .msg::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -14px;
+            border-top: 10px solid transparent;
+            border-right: 14px solid #999;
+            border-bottom: 10px solid transparent;
+        }
+        .msg::after{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -11px;
+            border-top: 10px solid transparent;
+            border-right: 12px solid #fff;
+            border-bottom: 10px solid transparent;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="triangle"></div>
+    <div class="triangle2"></div>
+    <div class="triangle3"></div>
+
+    <div style="clear:left;"></div>
+    <hr>
+
+    <div class="msg">
+        hello world
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap > div{
+            display: table-cell;
+            float: left;
+            width: 20%;
+            word-break: break-all;
+            margin-right: 2%;
+            border: 1px solid #000;
+        }
+        .wrap{
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div>
+            saddddddddddddddddddddddddddddddddddddddddddddddddddddddsadddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            saddddddddddddddddddddddddddddddddddddddddddddddddddddddsadddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            saddddddddddddddddddddddddddddddddddddddddddddddddddddddsadddddddddddddddddddddddddddddddddddddddddddddddddddddd
+        </div>
+        <div>
+            saddddddddddddddddddddddddddddddddddddddddddddddddddddddsadddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            saddddddddddddddddddddddddddddddddddddddddddddddddddddddsadddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            sadddddddddddddddddddddddddddddddddddddddddddddddddddddd
+        </div>
+        <div>
+            saddddddddddddddddddddddddddddddddddddddddddddddddddddddsadddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            saddddddddddddddddddddddddddddddddddddddddddddddddddddddsadddddddddddddddddddddddddddddddddddddddddddddddddddddd
+        </div>
+        <div>
+            saddddddddddddddddddddddddddddddddddddddddddddddddddddddsadddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            sadddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            saddddddddddddddddddddddddddddddddddddddddddddddddddddddsadddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            sadddddddddddddddddddddddddddddddddddddddddddddddddddddd
+        </div>
+    </div>
+
+    <script>
+        class Tasks{
+            constructor(){
+                this.tasks = [];
+            }
+            add(task){
+                this.tasks.push(task);
+            }
+            work(){
+                window.requestAnimationFrame(() => {
+                    if(this.tasks.length){
+                        let current_task = this.tasks.shift();
+                        current_task();
+                        this.work();
+                    }
+                });
+            }
+        }
+
+        const f1 = () => console.log("f1 hello i am f1");
+        const f2 = () => console.log("f2 hello i am f2");
+        const f3 = () => console.log("f3 hello i am f3");
+
+        let tasks = new Tasks();
+        tasks.add(f1);
+        tasks.add(f2);
+        tasks.add(f3);
+        tasks.work();
+    </script>
+</body>
+</html>

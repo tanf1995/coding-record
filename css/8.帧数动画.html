@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+    <script>
+        class Tasks{
+            constructor(){
+                this.tasks = [];
+            }
+            add(task){
+                this.tasks.push(task);
+            }
+            work(){
+                window.requestAnimationFrame(() => {
+                    if(this.tasks.length){
+                        let current_task = this.tasks.shift();
+                        current_task();
+                        f1();
+                        f1();
+                        f1();
+                        this.work();
+                    }
+                });
+            }
+        }
+        var ele = document.querySelector('.box');
+        // var left_value = ele.offsetLeft;
+
+        const f1 = () => {
+            console.log((new Date).getTime());
+            ele.style.left = ele.offsetLeft + 1 + 'px';
+        };
+        const f2 = () => console.log("f2 hello i am f2");
+        const f3 = () => console.log("f3 hello i am f3");
+
+        let tasks = new Tasks();
+        for(let i=0;i<100;i++){
+            tasks.add(f1);
+        }
+        tasks.work();
+    </script>
+</body>
+</html>
