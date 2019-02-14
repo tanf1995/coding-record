@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0}
+        .wrap{
+            width: 800px;
+            height: 800px;
+            background-color: #000;
+            position: relative;
+        }
+        #sun{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            border-radius: 50%;
+            position: absolute;
+            top: 350px;
+            left: 350px;
+        }
+        .orbital{
+            border: 1px solid #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scaleY(0.7);
+        }
+        .planet{
+            text-align: center;
+            color: #fff;
+        }
+        #earth{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background-color: blue;
+            border-radius: 50%;
+            position: absolute;
+            top: 375px;
+            left: 575px;
+            transform-origin: -175px 25px;
+            animation: earth_move 10s linear infinite;
+        }
+        #earth > div{
+            animation: earth_self_move 3s linear infinite;
+        }
+        #earth_orbital{
+            width: 400px;
+            height: 400px;
+        }
+        #earth_outer{
+            animation: earth_outer_move 10s linear infinite;
+        }
+        
+        @keyframes earth_move{
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes earth_self_move{
+            from{
+                transform: rotate(0);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes earth_outer_move{
+            0%{
+                transform: translateY(0);
+            }
+            25%{
+                transform: translateY(-80px);
+            }
+            50%{
+                transform: translateY(0);
+            }
+            75%{
+                transform: translateY(80px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div id="sun"></div>
+        <div id="earth_orbital" class="orbital"></div>
+        <div id="earth_outer">
+            <div id="earth" class="planet">
+                <div>earth</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
