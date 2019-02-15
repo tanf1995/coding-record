@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+        .nav{
+            width: 200px;
+            background-color: #ccc;
+            box-shadow: 0 0 10px #444;
+        }
+        .nav .open{
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+        }
+        .nav > li:not(:last-child){
+            border-bottom: 1px solid #aaa;
+        }
+        .nav li .title{
+            position: relative;
+        }
+        .nav li .single{
+            height: 50px;
+            line-height: 50px;
+            font-weight: 900;
+            padding-left: 30px;
+        }
+        .nav > li .title::before{
+            content: "";
+            display: block;
+            position: absolute;
+            border-left: 6px solid #000;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            top: 50%;
+            left: 16px;
+            transform: translateY(-50%);
+        }
+        .nav > li .open::before{
+            border-top: 6px solid #fff;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            left: 12px;
+            transform: translateY(-25%);
+        }
+        .nav .sub{
+            background-color: #eee;
+            height: 0;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+        .sub > li{
+            height: 40px;
+            line-height: 40px;
+            padding-left: 40px;
+        }
+        .sub > li:not(:last-child){
+            border-bottom: 1px dotted #bbb;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul class="nav">
+        <li>
+            <div class="single">Home</div>
+        </li>
+        <li>
+            <div class="single title">Our Services</div>
+            <ul class="sub">
+                <li>Trans</li>
+                <li>SEO</li>
+                <li>WEB</li>
+                <li>Cloud computing</li>
+            </ul>
+        </li>
+        <li>
+            <div class="single title">Our Work</div>
+            <ul class="sub">
+                <li>font end</li>
+                <li>back end</li>
+            </ul>
+        </li>
+        <li>
+            <div class="single title">News</div>
+            <ul class="sub">
+                <li>localtion</li>
+                <li>around city</li>
+                <li>hot</li>
+            </ul>
+        </li>
+        <li>
+            <div class="single title">Contact</div>
+            <ul class="sub">
+                <li>QQ</li>
+                <li>WeChat</li>
+                <li>Email</li>
+            </ul>
+        </li>
+        <li>
+            <div class="single">About</div>
+        </li>
+    </ul>
+
+    <script>
+        var nav = document.querySelector('.nav');
+
+        nav.addEventListener('click', toggle, false);
+
+        function toggle(e){
+            var sub = e.target.nextElementSibling;
+
+            if(!e.target.getAttribute('class')){
+                return ;
+            }
+
+            if(e.target.getAttribute('class').indexOf('title') != -1){
+                if(e.target.getAttribute('class').indexOf('open') === -1){
+                    var siblings = e.currentTarget.querySelectorAll('.title');
+
+                    Array.prototype.forEach.call(siblings, function(item){
+                        if(item !== e.target) slideDown(item.nextElementSibling, item);
+                    })
+                    slideUp(sub, e.target);
+                }else{
+                    slideDown(sub, e.target);
+                }
+            }
+        }
+
+        function slideUp(sub_menu, nav){
+            var real_height = 0;
+
+            if(!sub_menu){
+                nav.setAttribute('class', nav.getAttribute('class') + ' open');
+                return;
+            }
+            sub_menu.style.height = 'auto';
+            real_height = sub_menu.offsetHeight;
+            sub_menu.style.height = "0";
+            nav.setAttribute('class', nav.getAttribute('class') + ' open');
+            setTimeout(function(){
+                sub_menu.style.height = real_height + 'px';
+            }, 15)
+        }
+        function slideDown(sub_menu, nav){
+            if(sub_menu) sub_menu.style.height = '0';
+            nav.setAttribute('class', nav.getAttribute('class').split('open').join(""));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap{
+            position: relative;
+            width: 200px;
+            height: 25px;
+            line-height: 25px;
+            background-color: antiquewhite;
+        }
+        .tooltip{
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            position: absolute;
+            top: 35px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.5s linear;
+        }
+        .tooltip::before{
+            content: "";
+            display: block;
+            position: absolute;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #000;
+            top: -10px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        .wrap:hover .tooltip{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        hello world
+
+        <div class="tooltip">
+            this is tooltip
+        </div>
+    </div>
+
+    <p>sss</p>
+</body>
+</html>
