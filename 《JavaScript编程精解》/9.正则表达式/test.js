@@ -1,0 +1,1 @@
+console.log("red oea".match(/\b[^e\s]+\b/ig))
