@@ -26,38 +26,82 @@ function buildGraph(edges) {
 const roadGraph = buildGraph(roads);
 
 class Robot{
-    constructor(place, packages){
+    constructor(place, packages=[]){
         this.place = place;
         this.packages = packages;
+        this.step = 0;
+        this.next_direction = 0;
+        this.mailRoute = [];
     }
-    move(destination){
+    move(){
+        let destination = this.choiceDest(this.next_direction).direction;
+
         if(!roadGraph[this.place].includes(destination)){
-            return this;
+            console.log("can't arrive!")
+            return false;
         }else{
             console.log("robot: move to destination " + destination);
-            let packages =  this.receiptPackage(this.packages, destination);
-            packages = this.putPackage(packages, destination);
-            return new Robot(destination, packages);
+            this.step++;
+            this.receiptPackage(destination);
+            this.putPackage(destination);
+            this.place = destination;
+            this.next_direction++;
         }
     }
-    receiptPackage(packages, destination){
-        return packages.map(item => {
-            if(item.place === destination){
+    receiptPackage(destination){
+        this.packages = this.packages.map(item => {
+            if(item.place === destination && !item.beReceipt){
                 item.beReceipt = true;
-                console.log("robot: receipt package from " + destination);
+                console.log(`robot: receipt package from ${destination}.Prepare to send to ${item.address}`);
             }
             return item;
         })
     }
-    putPackage(packages, destination){
-        return packages.filter(item => {
-            if(item.address !== destination){
-                return true;
-            }else{
-                console.log("robot: put package to " + destination);
+    putPackage(destination){
+        this.packages = this.packages.filter(item => {
+            if(item.address === destination && item.beReceipt){
+                console.log(`robot: put package to ${destination}`);
                 return false;
+            }else{
+                return true;
             }
         })
+    }
+    choiceDest(next_direction){
+        if(next_direction >= this.mailRoute.length){
+            let dest = this.packages[0].beReceipt ? this.packages[0].address : this.packages[0].place;
+            this.mailRoute = Robot.findRoute(roadGraph, this.place, dest);
+            this.next_direction = 0;
+            next_direction = 0;
+        }
+        return {direction: this.mailRoute[next_direction]};
+    }
+    static findRoute(graph, from, to) {
+        let work = [
+            {
+                at: from, 
+                route: []
+            }
+        ];
+        for (let i = 0; i < work.length; i++) {
+            let { at, route } = work[i];
+            for (let place of graph[at]) {
+                if (place == to) return route.concat(place);
+                if (!work.some(w => w.at == place)) {
+                    work.push({at: place, route: route.concat(place)});
+                }
+            }
+        }
+    }
+    static runRobot(){
+        let packages = Package.random(40);
+        let robot = new Robot("Post Office", packages);
+        console.log(packages);
+        while(robot.packages.length){
+            robot.move(robot.choiceDest().direction);
+        }
+        console.log("all package have been put.");
+        console.log(`robot took ${robot.step} step.`)
     }
 }
 
@@ -67,23 +111,23 @@ class Package{
         this.address = address;
         this.beReceipt = false;
     }
-}
-
-Package.random = function(Count = 5){
-    let packages = [];
-    for (let i = 0; i < Count; i++) {
-        let address = randomPick(Object.keys(roadGraph));
-        let place;
-        do {
-            place = randomPick(Object.keys(roadGraph));
-        } while (place == address);
-        packages.push(new Package(place, address));
+    static random(Count=5){
+        let packages = [];
+        for (let i = 0; i < Count; i++) {
+            let address = Package.randomPick(Object.keys(roadGraph));
+            let place;
+            do {
+                place = Package.randomPick(Object.keys(roadGraph));
+            } while (place == address);
+            packages.push(new Package(place, address));
+        }
+        return packages;
     }
-    return packages;
+    static randomPick(array) {
+        let choice = Math.floor(Math.random() * array.length);
+        return array[choice];
+    }
 }
 
-// 随机选择
-function randomPick(array) {
-    let choice = Math.floor(Math.random() * array.length);
-    return array[choice];
-}
+
+Robot.runRobot();
