@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        d{
+            transform: scale(0.8);
+        }
+    </style>
+</head>
+<body>
+    <div id="main"></div>
+    
+    <script>
+        class Empty{
+            constructor(){
+            }
+        }
+
+        class Wall{
+            constructor(x, y){
+                this.style = {
+                    "background-color": "#CDDEC1"
+                }
+                this.posX = x;
+                this.posY = y;
+            }
+        }
+
+        class Lava{
+            constructor(x, y){
+                this.style = {
+                    "background-color": "#CC564C"
+                }
+                this.posX = x;
+                this.posY = y;
+            }
+        }
+
+        class Player{
+            constructor(x, y){
+                this.style = {
+                    transform: "scaleX(0.7)",
+                    "background-color": "#343730"
+                };
+                this.posX = x;
+                this.posY = y;
+            }
+        }
+
+        class Coins{
+            constructor(x, y){
+                this.style = {
+                    transform: "scale(0.5)",
+                    "background-color": "#BBC558"
+                }
+                this.posX = x;
+                this.posY = y;
+            }
+        }
+
+        const levelChars = {
+            ".": Empty, "#": Wall, "+": Lava,
+            "@": Player, "o": Coins,
+            "=": Lava, "|": Lava, "v": Lava
+        };
+
+        class Level{
+            constructor(map){
+                let rows = map.trim().split("\n").map( line => [...line.trim()] );
+                this.width = rows.length;
+                this.height = rows[0].length;
+                this.rows = rows.map( (row, y) => {
+                    return row.map( (item, x) => {
+                        return new levelChars[item](x, y);
+                    } )
+                } );
+            }
+
+            static drawGame(level){
+                const main_box = document.getElementById("main");
+                const td_size = 40;
+                let table = document.createElement("table");
+                let style = document.createElement("style");
+
+                style.innerHTML = `
+                    #game{
+                        position: relative;
+                    }
+                    #game td{
+                        width: ${td_size}px;
+                        height: ${td_size}px;
+                        background-color: #2A91C0;
+                    }
+                    #game td div{
+                        width: ${td_size}px;
+                        height: ${td_size}px;
+                        position: absolute;
+                    }
+                `;
+                table.setAttribute("cellpadding", "0");
+                table.setAttribute("cellspacing", "0");
+                table.setAttribute("id", "game");
+
+                level.rows.map( (row, y) => {
+                    let tr = document.createElement("tr");
+
+                    row.map( (item, x) => {
+                        let td = document.createElement("td");
+                        let inner = document.createElement("div");
+
+                        item.style = Object.assign({}, item.style, {
+                            left: item.x*td_size + "px",
+                            top: item.y*td_size + "px"
+                        })
+                        inner.style = Level.transStyle(item.style);
+                        td.appendChild(inner);
+                        tr.appendChild(td);
+                    } )
+                    table.appendChild(tr);
+                } )
+                document.head.appendChild(style);
+                main_box.appendChild(table);
+            }
+
+            static transStyle(style){
+                let rel = "";
+
+                if(!style) return;
+                Object.keys(style).map(item => {
+                    rel += `${item}: ${style[item]};`;
+                })
+                return rel;
+            }
+        }
+
+        let simpleLevelPlan = `
+            ......................
+            ..#................#..
+            ..#..............=.#..
+            ..#.........o.o....#..
+            ..#.@......#####...#..
+            ..#####............#..
+            ......#++++++++++++#..
+            ......##############..
+            ......................
+        `;
+        let l1 = new Level(simpleLevelPlan);
+        Level.drawGame(l1);
+    </script>
+</body>
+</html>
