@@ -15,50 +15,80 @@
     <div id="main"></div>
     
     <script>
+        const td_size = 40;
+
+        class Vec{
+            constructor(x, y){
+                this.x = x;
+                this.y = y;
+            }
+
+            static changeX(dire, old_vec, ele){
+                let newX = old_vec.x + 0.25 * dire;
+
+                ele.style.left = newX * td_size + "px";
+                return new Vec(newX, old_vec.y);
+            }
+            
+        }
+
         class Empty{
-            constructor(){
+            constructor(pos){
+                this.pos = pos;
             }
         }
 
         class Wall{
-            constructor(x, y){
+            constructor(pos){
                 this.style = {
                     "background-color": "#CDDEC1"
                 }
-                this.posX = x;
-                this.posY = y;
+                this.pos = pos;
             }
         }
 
         class Lava{
-            constructor(x, y){
+            constructor(pos){
                 this.style = {
                     "background-color": "#CC564C"
                 }
-                this.posX = x;
-                this.posY = y;
+                this.pos = pos;
             }
         }
 
         class Player{
-            constructor(x, y){
+            constructor(pos){
                 this.style = {
                     transform: "scaleX(0.7)",
                     "background-color": "#343730"
                 };
-                this.posX = x;
-                this.posY = y;
+                this.pos = pos;
+                this.dom_ele = document.createElement("div");
+                Player.handleMove(this, this.dom_ele);
+            }
+
+            static handleMove(player, ele){
+                document.addEventListener("keydown", function(e){
+                    console.log(e);
+                    switch(e.code){
+                        case "ArrowRight":
+                            player.pos = Vec.changeX(1, player.pos, ele);
+                            break;
+                        case "ArrowLeft":
+                            player.pos = Vec.changeX(-1, player.pos, ele);
+                            break;
+                    }
+                }, false);
             }
         }
 
         class Coins{
-            constructor(x, y){
+            constructor(pos){
                 this.style = {
                     transform: "scale(0.5)",
                     "background-color": "#BBC558"
                 }
-                this.posX = x;
-                this.posY = y;
+                this.pos = pos;
             }
         }
 
@@ -75,16 +105,19 @@
                 this.height = rows[0].length;
                 this.rows = rows.map( (row, y) => {
                     return row.map( (item, x) => {
-                        return new levelChars[item](x, y);
+                        return new levelChars[item](new Vec(x, y));
                     } )
                 } );
             }
 
-            static drawGame(level){
+            static setGlobalStyle(td_size){
                 const main_box = document.getElementById("main");
-                const td_size = 40;
                 let table = document.createElement("table");
                 let style = document.createElement("style");
+
+                table.setAttribute("cellpadding", "0");
+                table.setAttribute("cellspacing", "0");
+                table.setAttribute("id", "game");
 
                 style.innerHTML = `
                     #game{
@@ -101,20 +134,23 @@
                         position: absolute;
                     }
                 `;
-                table.setAttribute("cellpadding", "0");
-                table.setAttribute("cellspacing", "0");
-                table.setAttribute("id", "game");
+                document.head.appendChild(style);
+                main_box.appendChild(table);
+            }
+
+            static drawGame(level, td_size){
+                let table = document.getElementById("game");
 
                 level.rows.map( (row, y) => {
                     let tr = document.createElement("tr");
 
                     row.map( (item, x) => {
                         let td = document.createElement("td");
-                        let inner = document.createElement("div");
+                        let inner = item.dom_ele ? item.dom_ele : document.createElement("div");
 
                         item.style = Object.assign({}, item.style, {
-                            left: item.x*td_size + "px",
-                            top: item.y*td_size + "px"
+                            left: item.pos.x*td_size + "px",
+                            top: item.pos.y*td_size + "px"
                         })
                         inner.style = Level.transStyle(item.style);
                         td.appendChild(inner);
@@ -122,8 +158,6 @@
                     } )
                     table.appendChild(tr);
                 } )
-                document.head.appendChild(style);
-                main_box.appendChild(table);
             }
 
             static transStyle(style){
@@ -149,7 +183,8 @@
             ......................
         `;
         let l1 = new Level(simpleLevelPlan);
-        Level.drawGame(l1);
+        Level.setGlobalStyle(40);
+        Level.drawGame(l1, 40);
     </script>
 </body>
 </html>
