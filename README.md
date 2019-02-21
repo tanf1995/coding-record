@@ -8,8 +8,9 @@
 
 ### JS
 
-2. *《JavaScript编程精解》*  30%
+2. `*《JavaScript编程精解》*  80% √`
 
         解决问题的思想
+        canvas和node章未看
 
 ### OTHER
