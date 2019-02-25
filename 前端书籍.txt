@@ -3,7 +3,7 @@ css：
 
 
 js：
-	js编程精解
+	js编程精解  √
 	JAVASCRIPT语言精髓与编程实践
 
 other：
