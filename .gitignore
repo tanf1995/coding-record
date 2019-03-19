@@ -1,4 +1,4 @@
-# 
+﻿# 
 *.mkv
 *.mp3
 
@@ -14,3 +14,6 @@ yarn.lock
 
 # git
 .git/
+
+# ps
+*.psd

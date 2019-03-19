@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+.box1, .box2 {
+  width: 200px;
+  height: 200px;
+  background-color: #cc0000;
+  font-size: 12px;
+  animation: boxAni  5s linear; }
+
+@keyframes boxAni {
+  0% {
+    transform: translateX(0px); }
+  50% {
+    transform: translateX(500px); }
+  100% {
+    transform: translateX(1000px); } }
+
+.box2 {
+  background-color: brown; }
+
+.box2 {
+  width: 400px;
+  height: 300px;
+  animation: none; }
