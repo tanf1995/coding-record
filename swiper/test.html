@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./swiper.min.css">
+    <style>
+        .swiper-container{
+            width: 300px;
+            height: 150px;
+        }
+        .swiper-slide{
+            width: 300px;
+            height: 150px;
+        }
+        .swiper-slide:nth-child(1){
+            background-color: red;
+        }
+        .swiper-slide:nth-child(2){
+            background-color: aqua;
+        }
+        .swiper-slide:nth-child(3){
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+        </div>
+    </div>
+
+
+    <script src="./swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay:true,
+            /*autoplay: {
+                delay: 3000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },*/
+        });
+    </script>
+</body>
+</html>
