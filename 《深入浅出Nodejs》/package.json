@@ -1,0 +1,10 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.6.2",
+    "bagpipe": "^0.3.5"
+  }
+}
