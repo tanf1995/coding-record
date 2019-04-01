@@ -2,22 +2,24 @@ let Bagpipe = require("bagpipe");
 let fs = require("fs");
 
 
-var bagpipe = new Bagpipe(1);
-console.log(bagpipe);
+var bagpipe = new Bagpipe(2);
 
-var files = ["file1.txt", "file2.txt", "file3.txt"];
-for (var i = 0; i < files.length; i++) {
-  bagpipe.push(fs.readFile, files[i], 'utf-8', function (err, data) {
-    if(err){
-        console.log(err);
-        return;
-    }
+function asyncTask(i, time){
     setTimeout(function(){
-        console.log(data);
-    }, 1000)
-  });
-  console.log(bagpipe.queue);
+        console.log("task" + i);
+    }, time);
 }
+
+var tasks = [[1, 2000], [2, 1000], [3, 500]];
+    for (var i = 0; i < tasks.length; i++) {
+        bagpipe.push(asyncTask, ...tasks[i], function (err, data) {
+            if(err){
+                console.log(err);
+                return;
+            }
+        });
+        console.log(bagpipe);
+    }
 
 
 bagpipe.on("full", function(length){
