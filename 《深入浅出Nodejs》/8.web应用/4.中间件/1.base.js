@@ -34,6 +34,18 @@ let handle404 = (req, res) => {
     res.end("not found");
 }
 
+let handle500 =  (err, req, res, stack) => {
+    stack =  stack.filter(middleware => middleware.length === 4);
+
+    let next = function(){
+        let middleware = stack.shift();
+
+        if(middleware) middleware(err, req, res, next);
+    }
+    
+    next();
+}
+
 let handleLogin = (req, res) => {
     res.writeHead(200, "ok");
     res.end("login success.");
@@ -71,10 +83,18 @@ let app = {
         }
     },
     handle: (req, res, stack) => {
-        let next = () => {
+        let next = (err) => {
             let middleware = stack.shift();
+            if(err){
+                handle500(req, res);
+                return;
+            }
             if(middleware){
-                middleware(req, res, next);
+                try{
+                    middleware(req, res, next);
+                }catch(err){
+                    next(err);
+                }
             }
         };
 
