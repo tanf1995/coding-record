@@ -38,4 +38,25 @@
 
 ### 5.15 all the best
 
-### 5.16 not to bad
+### 5.16 not too bad
+
+### 5.28
+
+* 配置字体图标
+
+    * 安装
+
+            yarn add react-native-vector-icons
+            yarn add @type/react-native-vector-icons
+
+    * android/app/build.gradle
+
+
+            + project.ext.vectoricons = [
+            +     iconFontNames: [ 
+            +         'FontAwesome.ttf', 'AntDesign.ttf' 
+            +     ] // 引入的字体， https://oblador.github.io/react-native-vector-icons/
+            + ]
+            + 
+            + apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
