@@ -37,3 +37,42 @@
                 + router,
                 render: h => h(App),
             }).$mount('#app')    
+
+
+## 配置 element-UI 按需引入
+
+    * 安装
+
+            yarn add element-ui
+            yarn add babel-plugin-component babel-preset-env -D
+
+
+    * babel.config.js
+
+            module.exports = {
+                presets: [
+                    '@vue/app',
+                    [
+                        "@babel/preset-env",
+                        {
+                            "modules": false
+                        }
+                    ]
+                ],
+                plugins: [
+                    [
+                        "component",
+                        {
+                            "libraryName": "element-ui",
+                            "styleLibraryName": "theme-chalk"
+                        }
+                    ]
+                ]
+            }
+
+    * element.js
+
+            import Vue from 'vue';
+            import { Button } from 'element-ui';
+
+            Vue.component(Button.name, Button);
