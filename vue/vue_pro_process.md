@@ -44,20 +44,14 @@
     * 安装
 
             yarn add element-ui
-            yarn add babel-plugin-component babel-preset-env -D
+            yarn add babel-plugin-component -D
 
 
     * babel.config.js
 
             module.exports = {
                 presets: [
-                    '@vue/app',
-                    [
-                        "@babel/preset-env",
-                        {
-                            "modules": false
-                        }
-                    ]
+                    '@vue/app'
                 ],
                 plugins: [
                     [
