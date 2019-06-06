@@ -70,3 +70,22 @@
             import { Button } from 'element-ui';
 
             Vue.component(Button.name, Button);
+
+
+## 配置接收命令行传的自定义参数，用于做多模式
+
+> **思路： 修改webpack配置，将参数传入process.env**
+
+* vue.config.js
+
+        + const {argv} = require('yargs');
+
+
+        ...
+        chainWebpack: config => {
+            config.plugin("define").tap(options => {
+                options[0]["process.env"].realApi = argv.realApi;
+                return options
+            })
+        },
+        ...
