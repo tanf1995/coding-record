@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0}
+
+        .box{
+            background-color: brown;
+            padding: 20px 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .box p{
+            text-align: center;
+            white-space: nowrap;
+            display: inline-block;
+            animation: move 20s linear infinite;
+        }
+        @keyframes move{
+            0%{
+                margin-left: 100%;
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <p>
+            Trump 2020 Camo Cap Now AVAILABLE WITH LIMITED SUPPLIES!Trump 2020 Camo Cap Now AVAILABLE WITH LIMITED SUPPLIES!
+        </p>
+    </div>
+</body>
+</html>
