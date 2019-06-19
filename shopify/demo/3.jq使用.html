@@ -7,8 +7,8 @@
     <title>Document</title>
     <style>
         .box{
-            width: 200px;
-            height: 200px;
+            width: 400px;
+            height: 800px;
             background-color: antiquewhite;
         }
     </style>
@@ -18,10 +18,34 @@
     <div class="box">
         asd
     </div>
+
+    <h3><strong>Return Policy?</strong></h3>
+    <ul>
+        <li>If you are not happy with this Trump 2020 cap for any reason, just shoot us an email at <a href="mailto:info@republicanhatrack.com"><strong>info@republicanhatrack.com</strong></a>&nbsp;with your order # and name. It will take 2-3 business days to process through back to your bank. Once a refund is processed you will receive an email notification.</li>
+        <li>&nbsp;<strong>*Refunds must be processed within 30 days of your purchase date. And item must be in the same condition as you received it.</strong></li>
+    </ul>
+    <h3><strong>Can I exchange an item?</strong></h3>
+    <ul>
+        <li><strong>Absolutely YES!</strong>&nbsp;Hassle-free returns. Just shoot us an email at <a href="mailto:info@republicanhatrack.com"><strong>info@republicanhatrack.com</strong></a>&nbsp;with your name, order # and the reason for exchanging.</li>
+        <li>If the exchange is due to packaging error, defect, or manufacturing issue, we will cover the cost to return the item. If not, you just have to cover the shipping and we’ll send you out a new item at no extra cost.</li>
+    </ul>
+    <h3><strong>How long does it take to receive my order?</strong></h3>
+    <ul>
+        <li>Your orders will be delivered immediately, here, in the <strong>USA</strong>. It can take up to 2-4 business days to arrive once shipped.</li>
+    </ul>
+    <h3><strong>Is this one size fits all?</strong></h3>
+    <ul>
+        <li>yes, it’s adjustable.</li>
+    </ul>
     
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
-        $('.box').fadeOut();
+        // $('.box').fadeOut();
+        $('.box').slideUp();
+        $(window).on('click', function(){
+            console.log("a");
+            $('.box').slideDown();
+        })
     </script>
 </body>
 </html>

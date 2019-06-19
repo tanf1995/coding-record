@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0}
+        ._pop-alert-window{
+            width: 455px;
+            position: fixed;
+            left: 10px;
+            bottom: 10px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px #ccc;
+            box-sizing: border-box;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        ._pop-alert-window .product{
+            width: 100px;
+            height: 120px;
+            float: left;
+        }
+
+        ._pop-alert-window .product img{
+            width: 100%;
+            height: 100%;
+        }
+
+        ._pop-alert-window .info{
+            margin-left: 115px;
+            margin-right: 15px;
+            margin-top: 15px;
+        }
+
+        ._pop-alert-window .info ._desc{
+            font-size: 12px;
+            color: #999;
+        }
+
+        ._pop-alert-window .info ._time{
+            font-size: 12px;
+            color: #999;
+        }
+
+        ._pop-alert-window .info h3{
+            font-size: 15px;
+            margin: 10px 0;
+            color: #111;
+        }
+
+        ._pop-alert-window #close{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    
+    <a href="" class="_pop-alert-window">
+        <div class="product">
+            <img src="https://cdn.shopify.com/s/files/1/0084/5253/8423/products/IMG_20190527_150439_540x.png?v=1560847548" alt="">
+        </div>
+        <div class="info">
+            <p class="_desc">Dalton from California purchased just now</p>
+            <h3>Trump 2020 USA Flag Baseball Cap </h3>
+            <p class="_time">a few minutes ago</p>
+        </div>
+
+        <span id="close">
+            x
+        </span>
+    </a>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $('#close').on('click', function(){
+            console.log('close');
+            return false;
+        })
+    </script>
+</body>
+</html>
