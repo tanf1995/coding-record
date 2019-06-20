@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap{
+            border: 1px solid #000;
+            overflow: hidden;
+            min-height: 600px;
+            width: 600px;
+        }
+
+        .wrap ul{
+            list-style: none;
+            position: relative;
+            width: 600px;
+            height: 400px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap ul li{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .wrap ul li img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap"></div>
+
+    <div>
+        <img class="img" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2279055805,3887160486&fm=27&gp=0.jpg" alt="">
+        <img class="img" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1593456909,670174312&fm=27&gp=0.jpg" alt="">
+        <img class="img" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3168162922,1075236157&fm=27&gp=0.jpg" alt="">
+    </div>
+    
+    <script src="./js/iSlider.min.js"></script>
+    <!-- <script src="./js/iSlider.ani.min.js"></script> -->
+    <script>
+        var list = [
+            {
+                content: '<img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2279055805,3887160486&fm=27&gp=0.jpg" alt="">'
+            },
+            {
+                content: '<img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1593456909,670174312&fm=27&gp=0.jpg" alt="">'
+            },
+            {
+                content: '<img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3168162922,1075236157&fm=27&gp=0.jpg" alt="">'
+            }
+        ];
+
+        // var s = new iSlider(document.getElementsByClassName('wrap')[0], list, {
+        //     isAutoplay: 0,
+        //     isLooping: 1,
+        //     isOverspread: 1,
+        //     animateTime: 800,
+        //     animateType: 'rotate',
+        //     isOverspread: true
+        // })
+        var s2 = new iSlider({
+            dom: document.getElementsByClassName('wrap')[0],
+            data: [
+                {
+                    content: document.getElementsByClassName('img')[0]
+                },
+                {
+                    content: document.getElementsByClassName('img')[1]
+                },
+                {
+                    content: document.getElementsByClassName('img')[2]
+                }
+            ],
+            isAutoplay: 0,
+            isLooping: 1,
+            isOverspread: 1,
+            animateTime: 800,
+            animateType: 'rotate',
+            isOverspread: true
+        })
+    </script>
+</body>
+</html>
