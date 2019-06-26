@@ -36,3 +36,50 @@
 1. `*官方文档足够* 40%`
 
         类型、接口、类、函数
+
+
+## 数据可视化
+
+* echarts
+
+* antV
+
+
+## technology
+
+### 前端
+
+* webpack + gulp + babel + postcss
+
+* react + react-router5 + redux + redux-saga
+
+* react-native
+
+* vue + vue-router + vux
+
+* bootstrap + antd + semantic-react + element-ui + vuetify + echarts + g2
+
+* typescript
+
+* sass
+
+* shopify theme
+
+### 后端
+
+* python-flask
+
+* node
+
+* mysql + mongodb
+
+
+## to do list
+
+1. webpack 从零搭建 `react + typescript` 脚手架
+
+2. react全家桶（umi+dva） + `antd` + `g2` 仿 antd-pro
+
+3. vue全家桶 + `koa` + `socket.io` 聊天室
+
+4. `react-native` 计算器
