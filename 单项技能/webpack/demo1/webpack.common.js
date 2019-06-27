@@ -10,7 +10,7 @@ module.exports = {
         print: './src/print.js'
     },
     output: {
-        filename: "[name].[chunkhash].js",
+        filename: "[name].[hash].js",
         path: path.resolve(__dirname, 'dist')
     },
     module: {

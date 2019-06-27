@@ -1,0 +1,10 @@
+.btn{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+}
+
+.tf{
+    background-color: aqua;
+}

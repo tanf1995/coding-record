@@ -4,10 +4,21 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "build": "webpack --config config/webpack.config.js"
+        "start": "webpack-dev-server --config config/webpack.config.dev.js",
+        "build": "webpack --config config/webpack.config.prod.js"
     },
     "dependencies": {
+        "clean-webpack-plugin": "^3.0.0",
+        "css-loader": "^3.0.0",
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "file-loader": "^4.0.0",
+        "html-webpack-plugin": "^3.2.0",
+        "style-loader": "^0.23.1",
+        "url-loader": "^2.0.1",
         "webpack": "^4.35.0",
-        "webpack-cli": "^3.3.5"
+        "webpack-cli": "^3.3.5",
+        "webpack-dev-server": "^3.7.2",
+        "webpack-manifest-plugin": "^2.0.4",
+        "webpack-merge": "^4.2.1"
     }
 }
