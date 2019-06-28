@@ -1,12 +1,16 @@
 import './index.css';
 import png from './assets/images/timg.jpg';
 import blackBox from './components/BlackBox';
+import _ from 'lodash';
+import sayHello from './components/Sayhello';
 
 
 function component(){
     var element = document.createElement('div');
 
-    element.innerHTML = "hello world!";
+    element.innerHTML = "hello world243!";
+    element.innerHTML += _.fromPairs([['fred', 30], ['barney', 40]]).toString();
+    element.innerHTML += sayHello();
     element.classList.add('text');
     return element;
 }

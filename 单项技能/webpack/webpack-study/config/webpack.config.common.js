@@ -28,7 +28,7 @@ function commonConfigCreator(options){
             print: './src/components/print.js'
         },
         output: {
-            filename: '[name].bundle.js',
+            filename: '[name].[chunkhash].bundle.js',
             path: path.resolve(__dirname, options.output.relativePath),
             publicPath: options.output.publicPath
         },

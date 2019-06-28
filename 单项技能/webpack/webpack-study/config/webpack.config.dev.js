@@ -1,4 +1,5 @@
 const merge = require('webpack-merge');
+const webpack = require('webpack');
 const path = require('path');
 const commonConfigCreator = require('./webpack.config.common');
 
@@ -19,7 +20,7 @@ const devConfig = {
                 use: ["style-loader", "css-loader"]
             },
         ]
-    },
+    }
 }
 
 const commonConfigOptions = {

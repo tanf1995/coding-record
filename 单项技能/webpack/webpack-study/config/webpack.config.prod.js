@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const commonConfigCreator = require('./webpack.config.common');
 //plugin
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 
 const prodConfig = {
@@ -26,8 +27,23 @@ const prodConfig = {
         }),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production')
-        })
-    ]
+        }),
+        new BundleAnalyzerPlugin(),
+        new webpack.HashedModuleIdsPlugin()
+    ],
+    optimization: {
+        splitChunks: {
+            automaticNameDelimiter: '-',
+            cacheGroups: {
+                commons: {
+                    name: "commons",
+                    chunks: "initial",
+                    minChunks: 2 ,  // 模块被引用最小次数
+                    minSize: 30000 
+                }
+            }
+        }
+    }
 }
 
 const commonConfigOptions = {
