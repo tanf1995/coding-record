@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>find the dog</title>
+    <style>
+        table{
+            width: 100%
+        }
+        table tr{
+            height: 35px;
+        }
+        table tr td:first-child{
+            width: 300px;
+        }
+        table tr td:last-child{
+            width: 100%;
+            float: left;
+        }
+        table tr td:last-child input[type=text], table tr td:last-child input[type=email]{
+            width: 80%;
+            border: none;
+            border-bottom: 1px solid #333;
+            outline: none;
+        }
+        #sub{
+            display: block;
+            margin: 15px auto;
+            width: 80%;
+            height: 40px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aliens Abducted Me - Report an Abduction</h1>
+
+    <h3>Share your story of alien abduction:</h3>
+
+    <form method="post" action="/test/report.php">
+        <table>
+            <tr>
+                <td>First name: </td>
+                <td>
+                    <input type="text" name="first_name">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>Last name: </td>
+                <td>
+                    <input type="text" name="last_name">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>What is your email address? </td>
+                <td>
+                    <input type="email" name="email">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>When did it happen? </td>
+                <td>
+                    <input type="text" name="time_happen">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>How long were you gone? </td>
+                <td>
+                    <input type="text" name="time_gone">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>How many did you see? </td>
+                <td>
+                    <input type="text" name="how_many">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>Describe them: </td>
+                <td>
+                    <input type="text" name="desc">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>What did they do to you? </td>
+                <td>
+                    <input type="text" name="do_something">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>Have you seen my dog Fang? </td>
+                <td>
+                    <label>Yes</label>
+                    <input type="radio" name="seenDog">
+    
+                    <label>No</label>
+                    <input type="radio" name="seenDog">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>Anything else you want to add? </td>
+                <td>
+                    <textarea cols="60" rows="4" name="add_something"></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <input type="submit" value="Report Abduction" id="sub" />
+    </form>
+</body>
+</html>

@@ -2,6 +2,8 @@
 
 * 安装 `react`， 编写组件，再做配置，争取打包正常
 
+* react 模块热替换  react-hot-loader
+
 * 配置babel-loader 支持jsx、es6
 
     * https://babel.docschina.org/docs/en/usage
@@ -35,4 +37,13 @@
 
 *** 
 
-* react 模块热替换
+* 控制devServer输出信息
+
+* 配置node-ts
+
+
+# 待做
+
+* 开发模式，控制台信息控制
+
+* 监听端口是否被占用，显示输出IP
