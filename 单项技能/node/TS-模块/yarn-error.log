@@ -1,0 +1,41 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\pc\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @type/node
+
+PATH: 
+  D:\Program Files\NetSarang\Xshell 6\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\pc\AppData\Local\Yarn\bin;C:\Users\pc\AppData\Local\Yarn\Data\global\node_modules;C:\Go\bin;D:\Program Files\hugo;C:\ProgramData\chocolatey\bin;C:\Python27;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Python27\Scripts;D:\Program Files\Java\jdk1.8.0_211\bin;D:\ProgramFiles\Android\Sdk\platform-tools;C:\Program Files\nodejs\;D:\ProgramFiles\ThemKit;C:\Users\pc\AppData\Local\Microsoft\WindowsApps;;D:\Microsoft VS Code\bin;D:\Program Files\Fiddler2;C:\Users\pc\go\bin;C:\Users\pc\AppData\Roaming\npm
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  12.2.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@type%2fnode: Not found
+      at Request.params.callback [as _callback] (C:\Users\pc\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:65894:18)
+      at Request.self.callback (C:\Users\pc\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:129018:22)
+      at Request.emit (events.js:196:13)
+      at Request.<anonymous> (C:\Users\pc\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:129990:10)
+      at Request.emit (events.js:196:13)
+      at IncomingMessage.<anonymous> (C:\Users\pc\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:129912:12)
+      at Object.onceWrapper (events.js:284:20)
+      at IncomingMessage.emit (events.js:201:15)
+      at endReadableNT (_stream_readable.js:1130:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:9)
+
+npm manifest: 
+  {
+    "name": "ts-modules",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

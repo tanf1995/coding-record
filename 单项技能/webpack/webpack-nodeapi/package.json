@@ -1,0 +1,13 @@
+{
+  "name": "webpack-nodeapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
+  },
+  "dependencies": {
+    "webpack-dev-server": "^3.7.2"
+  }
+}
