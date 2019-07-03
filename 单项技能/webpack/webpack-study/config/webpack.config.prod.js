@@ -37,8 +37,10 @@ const prodConfig = {
             cacheGroups: {
                 commons: {
                     name: "commons",
-                    chunks: "initial",
-                    minChunks: 2 ,  // 模块被引用最小次数
+                    // chunks: "initial",
+                    chunks: "async",
+                    // chunks: "all",
+                    minChunks: 1 ,  // 模块被引用最小次数
                     minSize: 30000 
                 }
             }

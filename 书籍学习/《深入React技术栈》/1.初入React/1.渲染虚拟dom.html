@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script>
+        var v_dom = {
+            type: "div",
+            props: {
+                className: "box",
+                children: [
+                    {
+                        type: "h2",
+                        props: {
+                            children: "React"
+                        }
+                    },
+                    {
+                        type: "button",
+                        props: {
+                            children: "confirm"
+                        }
+                    },
+                    {
+                        type: "p",
+                        props: {
+                            children: "Welcome!"
+                        }
+                    }
+                ]
+            }
+        }
+
+        var root = document.getElementById('root');
+
+        function renderElement(v_dom){
+            var ele = document.createElement(v_dom.type);
+
+            if(v_dom.props.className) ele.classList.add(v_dom.props.className)
+
+            if(Array.isArray(v_dom.props.children)){
+                v_dom.props.children.forEach(item => {
+                    ele.appendChild(renderElement(item));
+                })
+            }else if(typeof v_dom.props.children === 'string'){
+                ele.innerHTML = v_dom.props.children;
+            }
+
+            return ele;
+        }
+        root.appendChild(renderElement(v_dom));
+    </script>
+</body>
+</html>
