@@ -3,14 +3,16 @@ import './App.css';
 
 import Base from "./components/base/Base";
 import BaseHook from './components/Hook/BaseHook';
+import TestRender from './components/TestRender';
 
 
 class App extends Component {
     render() {
         return (
-            <div>
+            <div className="app">
                 {/* <Base /> */}
-                <BaseHook />
+                {/* <BaseHook /> */}
+                <TestRender />
             </div>
         );
     }
