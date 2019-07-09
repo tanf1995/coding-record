@@ -210,6 +210,7 @@
     > config/webpack.common.js
 
         ...
+        + const HtmlWebpackPlugin = require('html-webpack-plugin');
         + const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
         function webpackCommonConfigCreator(options){
@@ -266,7 +267,7 @@
                 + module: {
                 +     rules: [
                 +         {
-                +             test: /\.(js|jsx)/,
+                +             test: /\.(js|jsx)$/,
                 +             include: path.resolve(__dirname, "../src"),
                 +             use: [
                 +                 {
@@ -368,13 +369,14 @@
                 module: {
                     rules: [
                         {
-                            test: /\.js/,
+                            test: /\.(js|jsx)$/,
+                            include: path.resolve(__dirname, "../src"),
                             use: [
                                 {
                                     loader: "babel-loader",
                                     options: {
                                         presets: ['@babel/preset-react'],
-                                        + plugins: ["react-hot-loader/babel"]
+                                        + plugins: ["react-hot-loader/babel"],
                                     }
                                 }
                             ]
@@ -428,8 +430,8 @@
                     rules: [
                         ...
                         + {
-                        +     include: path.resolve(__dirname, 'src'),
-                        +     test: /\.css/,
+                        +     test: /\.css$/,
+                        +     include: path.resolve(__dirname, '../src'),
                         +     use: ["style-loader", "css-loader"]
                         + }
                     ]
@@ -485,8 +487,8 @@
                         ...
                         {
                         -    test: /\.css/,
-                        +    test: /\.(css|scss)/,
-                            include: path.resolve(__dirname, 'src'),
+                        +    test: /\.(css|scss)$/,
+                            include: path.resolve(__dirname, '../src'),
                         -    use: ["style-loader", "css-loader"]
                         +    use: ["style-loader", "css-loader", "sass-loader"]
                         }
@@ -501,9 +503,10 @@
     > src/app.scss
 
         .title{
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 800;
-            color: chocolate;
+            color: #333;
+            text-decoration: underline;
         }
 
     > src/App.js
@@ -593,11 +596,16 @@
 
     > config/webpack.common.js
 
+        ...
+        + const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+        ...
         module: {
             rules: [
                 ...
                 {
-                    test: /\.(css|scss)/,
+                    test: /\.(css|scss)$/,
+                    include: path.resolve(__dirname, '../src'),
                     - use: [
                     -     "style-loader", 
                     -     {
@@ -631,7 +639,13 @@
                 },
                 ...
             ]
-        }
+        },
+        plugins: [
+            ...
+            new ExtractTextPlugin({
+                filename: "[name][hash].css"
+            }),
+        ]
 
 - `yarn build`
 
@@ -649,8 +663,6 @@
 - 配置
 
     > config/webpack.common.js
-
-        + const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
         module: {
             rules: [
@@ -698,9 +710,6 @@
             +         canPrint: true
             +     }),
             + ],
-            + optimization: {
-            +     minimizer: [new optimizeCss({})]
-            + }
         }
         ...
 
@@ -939,3 +948,174 @@
 
 ## 分割bundle
 
+- 配置
+
+    > config/webpack.common.js
+
+        function webpackCommonConfigCreator(options){
+            return {
+                ...
+                output: {
+                    - filename: "js/bundle.js",
+                    + filename: "js/[name].js",
+                    path: path.resolve(__dirname, "../build"),
+                },
+                ...
+                + optimization: {
+                +     splitChunks: {
+                +         chunks: "all",
+                +         minSize: 50000,
+                +         minChunks: 1,
+                +     }
+                + }
+            }
+        }
+
+- `yarn build`， 打包如下
+
+    ![wp](./doc-images/p15.png)
+
+
+## 缓存
+
+- 为了在每次修改代码后，浏览器都能获取到最新的js，通常会对output的名添加hash值
+
+    > config/webpack.common.js
+
+        output: {
+            - filename: "js/[name].js",
+            + filename: "js/[name][hash].js",
+            path: path.resolve(__dirname, "../build"),
+        },
+
+- 效果
+
+    - yarn build
+
+        ![wp](./doc-images/p16.png)
+
+    - 修改开发代码后再次打包
+
+        ![wp](./doc-images/p17.png)
+
+    ***可以看到修改代码后，打包的js文件名hash值变了，浏览器请求总能够获取到最新的代码***
+
+- 但是分割出来的antd和react的代码没有变化，名字也变了，则浏览器也会再次请求这个模块，应该没有发生改变的模块保持名称以使浏览器从缓存中获取，在生产模式下使用`[chunkhash]`替代`[hash]`
+
+    > config/webpack.common.js
+
+        output: {
+            - filename: "js/[name][hash].js",
+            path: path.resolve(__dirname, "../build"),
+        },
+
+    > config/webpack.prod.js
+
+        + output: {
+        +    filename: "js/[name][chunkhash].js",
+        + },
+
+    > config/webpack.dev.js
+
+        + output: {
+        +    filename: "js/[name][hash].js",
+        + },
+
+- 效果
+
+    - yarn build
+
+        ![wp](./doc-images/p18.png)
+
+    - 修改开发代码后再次打包
+
+        ![wp](./doc-images/p19.png)
+
+## 配置source-map和manifest.json
+
+- 在打包后的文件中，如果出现异常，堆栈追踪异常不能定位到打包前的单个文件，所以使用source-map。官方推荐开发模式下使用`inline-source-map`, 生产模式使用`source-map`
+
+    > config/webpack.dev.js
+
+        const config = {
+            ...
+            + devtool: "inline-source-map",
+            ...
+        }
+
+    > config/webpack.prod.js
+
+        const config = {
+            ...
+            + devtool: "source-map",
+            ...
+        }
+
+- manifest
+
+    - 安装
+
+        yarn add webpack-manifest-plugin -D
+
+    - 配置
+
+        > config/webpack.prod.js
+
+            ...
+            const ManifestPlugin = require('webpack-manifest-plugin');
+
+            const config = {
+                ...
+                plugins: [
+                    ...
+                    new ManifestPlugin(),
+                ]
+            }
+
+## 配置公共路径
+
+***当我们使用`vue-cli`或者`create-react-app`脚手架打包项目后，未修改publicPath的情况下直接打开`index.html`会报错无法找到js、css静态资源***
+
+***因为脚手架默认的publicPath设置为 `/`，则对应的资源外链都是从服务器路径`/`开始寻找资源***
+
+- 配置
+
+    > config/webpack.common.js
+
+        function webpackCommonConfigCreator(options){
+            return {
+                ...
+                output: {
+                    ...
+                    + publicPath: "/"
+                },
+                ...
+                module: {
+                    rules: [
+                        ...
+                        {
+                            test: /\.(jpg|png|svg|gif)$/,
+                            use: [
+                                {
+                                    loader: 'url-loader',
+                                    options: {
+                                        limit: 10240,
+                                        name: 'images/[hash].[ext]',
+                                        + publicPath: "/"
+                                    }
+                                },
+                            ]
+                        },
+                    ]
+                }
+            }
+        }
+
+- `yarn build`, 打包完成后推荐使用http-server
+
+        yarn global add http-server
+        npm install http-server -g
+
+- `http-server build`
+
+    ![wp](./doc-images/p20.png)

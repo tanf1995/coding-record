@@ -79,6 +79,7 @@
 1. webpack 从零搭建 `react + typescript` 脚手架
 
         start-time: 2019/6/26
+        end-time: 2019/7/9
 
 2. react全家桶（umi+dva） + `antd` + `g2` 仿 antd-pro
 
