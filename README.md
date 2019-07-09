@@ -81,6 +81,8 @@
         start-time: 2019/6/26
         end-time: 2019/7/9
 
+        地址： https://github.com/tanf1995/Webpack-react-cli
+
 2. react全家桶（umi+dva） + `antd` + `g2` 仿 antd-pro
 
 3. vue全家桶 + `koa` + `socket.io` 聊天室
