@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .tabs-container{
+            background-color: bisque;
+            width: 600px;
+        }
+        .tabs{
+            overflow: hidden;
+        }
+        .tabs .tab{
+            display: block;
+            float: left;
+            height: 40px;
+            line-height: 40px;
+            width: 120px;
+            text-align: center;
+            background-color: darkblue;
+            color: #fff;
+            margin-right: 5px;
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+        }
+        .tabs .dot{
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid gray;
+            display: inline-block;
+            background-color: #fff;
+        }
+        .tabs .active .dot{
+            background-color:lawngreen;
+        }
+        .contents{
+            min-height: 100px;
+        }
+        .contents > div{
+            display: none;
+            transition: opacity 0.4s;
+        }
+        .contents > div.active{
+            display: block;
+            animation: opacityAni 0.5s;
+        }
+
+        @keyframes opacityAni{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs-container">
+        <div class="tabs">
+            <span data-key="o1" class="tab active">
+                <span class="dot"></span>
+                option1
+            </span>
+
+            <span data-key="o2" class="tab">
+                <span class="dot"></span>
+                option2
+            </span>
+        </div>
+
+        <div class="contents">
+            <div data-key="o1">
+                content for option1
+            </div>
+
+            <div data-key="o2">
+                content for option2
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tabs = document.querySelector(".tabs-container .tabs");
+        var tabs_items = tabs.querySelectorAll('.tab');
+        var contents_items = document.querySelectorAll('.contents > div');
+        var active = "";
+
+        Array.prototype.forEach.call(tabs_items, function(option){
+            if(option.classList.contains('active')) active = option.getAttribute('data-key');
+        })
+        selectContent(active);
+        
+        tabs.addEventListener('click', function(e){
+            var target = null;
+
+            if(e.target.classList.contains('tab')){
+                target = e.target;
+            }else if(e.target.parentElement){
+                target = e.target.parentElement;
+            }else return;
+
+            if(!target.classList.contains('active')){
+                Array.prototype.forEach.call(tabs_items, function(tab){
+                    tab.classList.remove("active");
+                })
+                target.classList.add('active');
+                active = target.getAttribute('data-key');
+                selectContent(active);
+            }
+        })
+
+        function selectContent(active){
+            Array.prototype.forEach.call(contents_items, function(content){
+                if(content.getAttribute('data-key') === active){
+                    content.classList.add("active");
+                }else{
+                    content.classList.remove("active");
+                }
+            })
+        }
+    </script>
+</body>
+</html>
