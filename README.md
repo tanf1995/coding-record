@@ -78,16 +78,21 @@
 
 1. webpack 从零搭建 `react + typescript` 脚手架
 
-        start-time: 2019/6/26
-        end-time: 2019/7/9
+    - start-time: 2019/6/26
 
-        仓库地址： https://github.com/tanf1995/Webpack-react-cli
-        博客地址： https://juejin.im/post/5d246f78e51d4577523f240e
+    - end-time: 2019/7/9
 
-2. react全家桶（umi+dva） + `antd` + `g2` 仿 antd-pro
+    - 仓库地址： https://github.com/tanf1995/Webpack-react-cli
 
-3. vue全家桶 + `koa` + `socket.io` 聊天室
+    - 博客地址： https://juejin.im/post/5d246f78e51d4577523f240e
+
+
+2. react + `koa` + `socket.io` 聊天室
+
+    - start-time: 2019/7/11
+
+
+3. react全家桶（umi+dva） + `antd` + `g2` 仿 antd-pro
+
 
 4. `react-native` 计算器
-
-***每个tag完成后，一篇博客***
