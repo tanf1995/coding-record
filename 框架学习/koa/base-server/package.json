@@ -1,7 +1,0 @@
-{
-    "name": "base-koa",
-    "version": "0.0.1",
-    "dependencies": {
-        "koa": "^2.6.2"
-    }
-}
