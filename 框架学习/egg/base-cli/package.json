@@ -1,0 +1,15 @@
+{
+  "name": "base-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "egg": "^2.23.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.13.0"
+  },
+  "scripts": {
+    "dev": "egg-bin dev"
+  }
+}

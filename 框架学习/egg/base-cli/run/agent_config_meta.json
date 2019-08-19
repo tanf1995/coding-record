@@ -1,0 +1,258 @@
+{
+  "keys": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\config\\config.default.js",
+  "session": {
+    "maxAge": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-session\\config\\config.default.js"
+  },
+  "security": {
+    "domainWhiteList": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+    "protocolWhiteList": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+    "defaultMiddleware": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+    "csrf": {
+      "enable": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+      "type": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+      "ignoreJSON": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+      "useSession": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+      "cookieName": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+      "sessionName": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+      "headerName": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+      "bodyName": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+      "queryName": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+      "refererWhiteList": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "xframe": {
+      "enable": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "hsts": {
+      "enable": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.local.js",
+      "maxAge": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+      "includeSubdomains": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "dta": {
+      "enable": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "noopen": {
+      "enable": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "nosniff": {
+      "enable": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "xssProtection": {
+      "enable": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "csp": {
+      "enable": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+      "policy": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+      "checkAddress": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js"
+    }
+  },
+  "helper": {
+    "shtml": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js"
+  },
+  "jsonp": {
+    "limit": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "callback": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "csrf": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-jsonp\\config\\config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-onerror\\config\\config.default.js",
+    "templatePath": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-onerror\\config\\config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-i18n\\config\\config.default.js",
+    "dirs": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-i18n\\config\\config.default.js",
+    "queryField": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieField": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieDomain": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-i18n\\config\\config.default.js"
+  },
+  "watcher": {
+    "type": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-watcher\\config\\config.local.js",
+    "eventSources": {
+      "default": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-watcher\\config\\config.default.js",
+      "development": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-watcher\\config\\config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-schedule\\config\\config.default.js",
+      "file": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-schedule\\config\\config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-schedule\\config\\config.default.js"
+  },
+  "multipart": {
+    "mode": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-multipart\\config\\config.default.js",
+    "autoFields": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-multipart\\config\\config.default.js",
+    "defaultCharset": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldSize": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fields": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileSize": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-multipart\\config\\config.default.js",
+    "files": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileExtensions": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-multipart\\config\\config.default.js",
+    "whitelist": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-multipart\\config\\config.default.js",
+    "tmpdir": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-multipart\\config\\config.default.js",
+    "cleanSchedule": {
+      "cron": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-multipart\\config\\config.default.js"
+    }
+  },
+  "development": {
+    "watchDirs": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-development\\config\\config.default.js",
+    "ignoreDirs": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-development\\config\\config.default.js",
+    "fastReady": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-development\\config\\config.default.js",
+    "reloadOnDebug": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideDefault": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-development\\config\\config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFiles": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxDays": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-logrotator\\config\\config.default.js"
+  },
+  "static": {
+    "prefix": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-static\\config\\config.default.js",
+    "dir": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-static\\config\\config.default.js",
+    "dynamic": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-static\\config\\config.default.js",
+    "preload": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-static\\config\\config.default.js",
+    "buffer": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-static\\config\\config.default.js",
+    "maxFiles": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-static\\config\\config.default.js"
+  },
+  "view": {
+    "root": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-view\\config\\config.local.js",
+    "defaultExtension": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-view\\config\\config.default.js",
+    "defaultViewEngine": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-view\\config\\config.default.js",
+    "mapping": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-view\\config\\config.default.js"
+  },
+  "env": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+  "name": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+  "proxy": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+  "maxProxyCount": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+  "protocolHeaders": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+  "ipHeaders": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+  "hostHeaders": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+  "pkg": {
+    "name": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "version": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "main": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "license": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "dependencies": {
+      "egg": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+    },
+    "devDependencies": {
+      "egg-bin": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+    },
+    "scripts": {
+      "dev": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "baseDir": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+  "HOME": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+  "rundir": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+  "dump": {
+    "ignore": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "notFound": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "sitefile": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "middlewares": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "httpClient": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+  },
+  "bodyParser": {
+    "enable": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "formLimit": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "jsonLimit": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "strict": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "queryString": {
+      "arrayLimit": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+      "depth": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+      "parameterLimit": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+    },
+    "onerror": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+  },
+  "logger": {
+    "dir": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "env": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "level": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "consoleLevel": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "outputJSON": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "buffer": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "appLogName": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "coreLogName": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "agentLogName": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "errorLogName": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "coreLogger": {
+      "consoleLevel": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.local.js"
+    },
+    "allowDebugAtProd": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheLookupInterval": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "request": {
+      "timeout": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "logging": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+  },
+  "coreMiddleware": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+  "workerStartTimeout": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+  "serverTimeout": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+      "port": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+      "hostname": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+    "responseTimeout": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+  },
+  "onClientError": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+}
