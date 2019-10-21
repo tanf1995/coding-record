@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="print">
+    @page{
+      size: A4;
+      @bottom-left{
+        content: 'xxx合同';
+        margin: 10pt 0 30pt 0;
+        border-top: 0.25pt solid #333;
+        font-size: 10pt;
+        color: #333;
+      }
+    }
+    h2{
+      page-break-before: always; 
+    }
+  </style>
+</head>
+<body>
+  <h2>水调歌头</h2>
+
+  <p>明月几时有？把酒问青天。</p>
+  <p>不知天上宫阙，今夕是何年。</p>
+  <p>我欲乘风归去，又恐琼楼玉宇，高处不胜寒。</p>
+  <p>起舞弄轻影，何似在人间。</p>
+
+  <h2>水调歌头</h2>
+
+  <p>明月几时有？把酒问青天。</p>
+  <p>不知天上宫阙，今夕是何年。</p>
+  <p>我欲乘风归去，又恐琼楼玉宇，高处不胜寒。</p>
+  <p>起舞弄轻影，何似在人间。</p>
+
+  <script>
+    window.addEventListener('click', function () {
+      window.print()
+    })
+  </script>
+</body>
+</html>

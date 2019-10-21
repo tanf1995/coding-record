@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #uploadContractModel{
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      font-size: 14px;
+    }
+    #uploadContractModel .model{
+      background-color: #fff;
+      /* width: 50%;
+      height: 50vh;
+      margin: 25vh auto 0; */
+      width: 600px;
+      height: 400px;
+      margin: 200px auto 0;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #fff;
+    }
+    #uploadContractModel .model .head{
+      height: 40px;
+      line-height: 40px;
+      padding: 0 14px;
+      border-bottom: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    #uploadContractModel .model .body{
+      overflow: hidden;
+      height: 300px;
+      padding: 30px 100px;
+      box-sizing: border-box;
+    }
+    #uploadContractModel .model .body .imgUploader{
+      width: 170px;
+      height: 240px;
+      border: 1px dashed #d9d9d9;
+      line-height: 240px;
+      text-align: center;
+      color: #8c939d;
+      font-size: 40px;
+      font-weight: 200;
+      cursor: pointer;
+      position: relative;
+    }
+    #uploadContractModel .model .body .imgUploader:hover{
+      border-color: #409eff;
+    }
+    #uploadContractModel .model .body .imgUploader img{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    #uploadContractModel .model .body .imgUploader#contractImg1{
+      float: left;
+    }
+    #uploadContractModel .model .body .imgUploader#contractImg2{
+      float: right;
+    }
+    #uploadContractModel .model .btnWrap{
+      overflow: hidden;
+      padding: 0 60px;
+    }
+    #uploadContractModel .model .btnWrap .btn{
+      float: right;
+      width: 100px;
+      height: 40px;
+      background-color: #409eff;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="uploadContractModel">
+    <div class="model">
+      <div class="head">派车单：D5XXXXXXX</div>
+
+      <div class="body">
+        <div id="contractImg1" class="imgUploader">
+          +
+        </div>
+
+        <div id="contractImg2" class="imgUploader">
+          +
+        </div>
+      </div>
+
+      <div class="btnWrap">
+        <button class="btn">确认</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
