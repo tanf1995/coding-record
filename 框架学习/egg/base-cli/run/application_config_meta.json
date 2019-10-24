@@ -9,22 +9,10 @@
     "cache": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-view\\config\\config.local.js",
     "defaultExtension": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-view\\config\\config.default.js"
   },
-  "news": {
-    "pageSize": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\config\\config.default.js",
-    "serverUrl": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\config\\config.default.js"
-  },
-  "session": {
-    "maxAge": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-session\\config\\config.default.js",
-    "key": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-session\\config\\config.default.js",
-    "httpOnly": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-session\\config\\config.default.js",
-    "encrypt": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-session\\config\\config.default.js"
-  },
+  "middleware": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\config\\config.default.js",
   "security": {
-    "domainWhiteList": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
-    "protocolWhiteList": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
-    "defaultMiddleware": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
     "csrf": {
-      "enable": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+      "enable": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\config\\config.default.js",
       "type": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
       "ignoreJSON": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
       "useSession": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
@@ -35,6 +23,9 @@
       "queryName": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
       "refererWhiteList": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js"
     },
+    "domainWhiteList": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+    "protocolWhiteList": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
+    "defaultMiddleware": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
     "xframe": {
       "enable": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
       "value": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js"
@@ -72,6 +63,12 @@
       "ipBlackList": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js",
       "checkAddress": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js"
     }
+  },
+  "session": {
+    "maxAge": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-session\\config\\config.default.js"
   },
   "helper": {
     "shtml": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-security\\config\\config.default.js"
@@ -176,7 +173,8 @@
       "egg-bin": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
     },
     "scripts": {
-      "dev": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+      "dev": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+      "start": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
     }
   },
   "baseDir": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",

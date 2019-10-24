@@ -145,8 +145,17 @@
       "root": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\app\\view",
       "cache": false,
       "defaultExtension": ".html",
-      "defaultViewEngine": "",
-      "mapping": {}
+      "defaultViewEngine": "nunjucks",
+      "mapping": {
+        ".tpl": "nunjucks"
+      }
+    },
+    "nunjucks": {
+      "autoescape": true,
+      "throwOnUndefined": false,
+      "trimBlocks": false,
+      "lstripBlocks": false,
+      "cache": false
     },
     "env": "local",
     "name": "base-cli",
@@ -168,7 +177,8 @@
         "egg-bin": "^4.13.0"
       },
       "scripts": {
-        "dev": "egg-bin dev"
+        "dev": "egg-bin dev",
+        "start": "egg-bin dev EGG_SERVER_ENV=prod"
       }
     },
     "baseDir": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli",
@@ -267,9 +277,16 @@
       "responseTimeout": 60000
     },
     "onClientError": null,
+    "news": {
+      "pageSize": 5,
+      "serverUrl": "https://www.easy-mock.com/mock/5cbd59f4d7610142137b4289/dev/api"
+    },
+    "middleware": [
+      "addSuffix"
+    ],
     "coreMiddlewares": "~config~coreMiddleware",
-    "appMiddlewares": [],
-    "appMiddleware": "~config~appMiddlewares"
+    "appMiddlewares": "~config~middleware",
+    "appMiddleware": "~config~middleware"
   },
   "plugins": {
     "session": {
@@ -417,6 +434,20 @@
       "from": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\plugin.js",
       "path": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-view",
       "version": "2.1.2"
+    },
+    "nunjucks": {
+      "enable": true,
+      "package": "egg-view-nunjucks",
+      "name": "nunjucks",
+      "dependencies": [
+        "security",
+        "view"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\config\\plugin.js",
+      "path": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\_egg-view-nunjucks@2.2.0@egg-view-nunjucks",
+      "version": "2.2.0"
     }
   }
 }

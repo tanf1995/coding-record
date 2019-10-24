@@ -1,0 +1,304 @@
+2019-08-19 16:53:41,684 ERROR 1048 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 1048
+hostname: DESKTOP-0D3TES1
+
+2019-08-19 17:05:37,286 ERROR 12352 [-/::1/-/5034ms GET /news] nodejs.ConnectionTimeoutError: Connect timeout for 5000ms, GET https://hacker-news.firebaseio.com/v0/topstories.json -2 (connected: false, keepalive socket: false, agent status: {"createSocketCount":1,"createSocketErrorCount":0,"closeSocketCount":1,"errorSocketCount":0,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{},"requests":{}}, socketHandledRequests: 1, socketHandledResponses: 0)
+headers: {}
+headers: {}
+    at Timeout._onTimeout (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\urllib\lib\urllib.js:923:15)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ConnectionTimeoutError"
+requestId: 1
+data: undefined
+path: "/v0/topstories.json?orderBy=%22%24key%22&startAt=%220%22&endAt=%224%22"
+status: -2
+headers: {}
+res: {"status":-2,"statusCode":-2,"statusMessage":null,"headers":{},"size":0,"aborted":false,"rt":5023,"keepAliveSocket":false,"requestUrls":["https://hacker-news.firebaseio.com/v0/topstories.json"],"timing":null,"remoteAddress":"35.201.97.85","remotePort":"","socketHandledRequests":1,"socketHandledResponses":0}
+pid: 12352
+hostname: DESKTOP-0D3TES1
+
+2019-08-19 17:05:52,159 ERROR 12352 [-/::1/-/5005ms GET /news] nodejs.ConnectionTimeoutError: Connect timeout for 5000ms, GET https://hacker-news.firebaseio.com/v0/topstories.json -2 (connected: false, keepalive socket: false, agent status: {"createSocketCount":2,"createSocketErrorCount":0,"closeSocketCount":2,"errorSocketCount":0,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{},"requests":{}}, socketHandledRequests: 1, socketHandledResponses: 0)
+headers: {}
+headers: {}
+    at Timeout._onTimeout (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\urllib\lib\urllib.js:923:15)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ConnectionTimeoutError"
+requestId: 2
+data: undefined
+path: "/v0/topstories.json?orderBy=%22%24key%22&startAt=%220%22&endAt=%224%22"
+status: -2
+headers: {}
+res: {"status":-2,"statusCode":-2,"statusMessage":null,"headers":{},"size":0,"aborted":false,"rt":5003,"keepAliveSocket":false,"requestUrls":["https://hacker-news.firebaseio.com/v0/topstories.json"],"timing":null,"remoteAddress":"35.201.97.85","remotePort":"","socketHandledRequests":1,"socketHandledResponses":0}
+pid: 12352
+hostname: DESKTOP-0D3TES1
+
+2019-08-19 17:07:07,269 ERROR 12352 [-/::1/-/5003ms GET /news] nodejs.ConnectionTimeoutError: Connect timeout for 5000ms, GET https://hacker-news.firebaseio.com/v0/topstories.json -2 (connected: false, keepalive socket: false, agent status: {"createSocketCount":3,"createSocketErrorCount":0,"closeSocketCount":3,"errorSocketCount":0,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{},"requests":{}}, socketHandledRequests: 1, socketHandledResponses: 0)
+headers: {}
+headers: {}
+    at Timeout._onTimeout (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\urllib\lib\urllib.js:923:15)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ConnectionTimeoutError"
+requestId: 3
+data: undefined
+path: "/v0/topstories.json?orderBy=%22%24key%22&startAt=%220%22&endAt=%224%22"
+status: -2
+headers: {}
+res: {"status":-2,"statusCode":-2,"statusMessage":null,"headers":{},"size":0,"aborted":false,"rt":5002,"keepAliveSocket":false,"requestUrls":["https://hacker-news.firebaseio.com/v0/topstories.json"],"timing":null,"remoteAddress":"35.201.97.85","remotePort":"","socketHandledRequests":1,"socketHandledResponses":0}
+pid: 12352
+hostname: DESKTOP-0D3TES1
+
+2019-08-19 17:15:15,997 ERROR 1048 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 1048
+hostname: DESKTOP-0D3TES1
+
+2019-08-19 17:20:28,853 ERROR 12980 [-/::1/-/243ms GET /news] nodejs.SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at NewsService.list (E:\gits\coding-record\框架学习\egg\base-cli\app\service\news.js:27:26)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 12980
+hostname: DESKTOP-0D3TES1
+
+2019-08-19 17:20:31,607 ERROR 12980 [-/::1/-/70ms GET /news] nodejs.SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at NewsService.list (E:\gits\coding-record\框架学习\egg\base-cli\app\service\news.js:27:26)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 12980
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 19:04:54,709 ERROR 16856 [-/::1/-/282ms GET /news] nodejs.ResponseError: certificate has expired, GET https://www.easy-mock.com/mock/5cbd59f4d7610142137b4289/dev/api/news -1 (connected: true, keepalive socket: false, agent status: {"createSocketCount":1,"createSocketErrorCount":0,"closeSocketCount":0,"errorSocketCount":1,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{"www.easy-mock.com:443::::::::::::::::::":1},"requests":{}}, socketHandledRequests: 1, socketHandledResponses: 0)
+headers: {}
+    at TLSSocket.onConnectSecure (_tls_wrap.js:1058:34)
+    at TLSSocket.emit (events.js:198:13)
+    at TLSSocket._finishInit (_tls_wrap.js:636:8)
+code: "CERT_HAS_EXPIRED"
+name: "ResponseError"
+data: undefined
+path: "/mock/5cbd59f4d7610142137b4289/dev/api/news"
+status: -1
+headers: {}
+res: {"status":-1,"statusCode":-1,"statusMessage":null,"headers":{},"size":0,"aborted":false,"rt":274,"keepAliveSocket":false,"requestUrls":["https://www.easy-mock.com/mock/5cbd59f4d7610142137b4289/dev/api/news"],"timing":null,"remoteAddress":"120.27.128.131","remotePort":443,"socketHandledRequests":1,"socketHandledResponses":0}
+pid: 16856
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 19:07:02,988 ERROR 12452 [-/::1/-/176ms GET /news] nodejs.ResponseError: certificate has expired, GET https://www.easy-mock.com/mock/5cbd59f4d7610142137b4289/dev/api/news -1 (connected: true, keepalive socket: false, agent status: {"createSocketCount":1,"createSocketErrorCount":0,"closeSocketCount":0,"errorSocketCount":1,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{"www.easy-mock.com:443::::::::::::::::::":1},"requests":{}}, socketHandledRequests: 1, socketHandledResponses: 0)
+headers: {}
+    at TLSSocket.onConnectSecure (_tls_wrap.js:1058:34)
+    at TLSSocket.emit (events.js:198:13)
+    at TLSSocket._finishInit (_tls_wrap.js:636:8)
+code: "CERT_HAS_EXPIRED"
+name: "ResponseError"
+data: undefined
+path: "/mock/5cbd59f4d7610142137b4289/dev/api/news"
+status: -1
+headers: {}
+res: {"status":-1,"statusCode":-1,"statusMessage":null,"headers":{},"size":0,"aborted":false,"rt":164,"keepAliveSocket":false,"requestUrls":["https://www.easy-mock.com/mock/5cbd59f4d7610142137b4289/dev/api/news"],"timing":null,"remoteAddress":"120.27.128.131","remotePort":443,"socketHandledRequests":1,"socketHandledResponses":0}
+pid: 12452
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 19:08:43,489 ERROR 12452 [-/::1/-/166ms GET /news?page=1] nodejs.ResponseError: certificate has expired, GET https://www.easy-mock.com/mock/5cbd59f4d7610142137b4289/dev/api/news -1 (connected: true, keepalive socket: false, agent status: {"createSocketCount":2,"createSocketErrorCount":0,"closeSocketCount":1,"errorSocketCount":2,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{"www.easy-mock.com:443::::::::::::::::::":1},"requests":{}}, socketHandledRequests: 1, socketHandledResponses: 0)
+headers: {}
+    at TLSSocket.onConnectSecure (_tls_wrap.js:1058:34)
+    at TLSSocket.emit (events.js:198:13)
+    at TLSSocket._finishInit (_tls_wrap.js:636:8)
+code: "CERT_HAS_EXPIRED"
+name: "ResponseError"
+data: undefined
+path: "/mock/5cbd59f4d7610142137b4289/dev/api/news"
+status: -1
+headers: {}
+res: {"status":-1,"statusCode":-1,"statusMessage":null,"headers":{},"size":0,"aborted":false,"rt":164,"keepAliveSocket":false,"requestUrls":["https://www.easy-mock.com/mock/5cbd59f4d7610142137b4289/dev/api/news"],"timing":null,"remoteAddress":"120.27.128.131","remotePort":443,"socketHandledRequests":1,"socketHandledResponses":0}
+pid: 12452
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 19:22:43,184 ERROR 18084 nodejs.AssertionError [ERR_ASSERTION]: Can't find view/about from E:\gits\coding-record\框架学习\egg\base-cli\app\view
+    at Map.resolve (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\egg-view\lib\view_manager.js:74:5)
+generatedMessage: false
+name: "AssertionError [ERR_ASSERTION]"
+code: "ERR_ASSERTION"
+actual: undefined
+expected: true
+operator: "=="
+pid: 18084
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 19:22:46,458 ERROR 13560 nodejs.AssertionError [ERR_ASSERTION]: Can't find view/about/about.html from E:\gits\coding-record\框架学习\egg\base-cli\app\view
+    at Map.resolve (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\egg-view\lib\view_manager.js:74:5)
+generatedMessage: false
+name: "AssertionError [ERR_ASSERTION]"
+code: "ERR_ASSERTION"
+actual: undefined
+expected: true
+operator: "=="
+pid: 13560
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 19:23:06,686 ERROR 10984 [-/::1/-/10ms GET /about] nodejs.AssertionError [ERR_ASSERTION]: Can't find view/about/about.html from E:\gits\coding-record\框架学习\egg\base-cli\app\view
+    at Map.resolve (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\egg-view\lib\view_manager.js:74:5)
+generatedMessage: false
+name: "AssertionError [ERR_ASSERTION]"
+code: "ERR_ASSERTION"
+actual: undefined
+expected: true
+operator: "=="
+pid: 10984
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 19:24:23,574 ERROR 6084 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 6084
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 19:29:03,793 ERROR 6084 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 6084
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 19:29:16,341 ERROR 6084 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 6084
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 19:35:15,135 ERROR 6084 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 6084
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 19:50:14,807 ERROR 6084 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 6084
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 19:50:36,717 ERROR 3828 [-/::1/-/13ms GET /] nodejs.TypeError: this.getUA is not a function
+    at HomeController.index (E:\gits\coding-record\框架学习\egg\base-cli\app\controller\home.js:7:42)
+    at Object.callFn (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+
+pid: 3828
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 19:50:39,365 ERROR 13460 [-/::1/-/13ms GET /] nodejs.TypeError: this.getUA is not a function
+    at HomeController.index (E:\gits\coding-record\框架学习\egg\base-cli\app\controller\home.js:7:42)
+    at Object.callFn (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+
+pid: 13460
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 19:51:24,179 ERROR 7756 [-/::1/-/12ms GET /] nodejs.ReferenceError: getUA is not defined
+    at HomeController.index (E:\gits\coding-record\框架学习\egg\base-cli\app\controller\home.js:7:26)
+    at Object.callFn (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+
+pid: 7756
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 19:51:31,278 ERROR 20596 [-/::1/-/11ms GET /] nodejs.ReferenceError: getUA is not defined
+    at HomeController.index (E:\gits\coding-record\框架学习\egg\base-cli\app\controller\home.js:7:37)
+    at Object.callFn (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+
+pid: 20596
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 20:26:05,520 ERROR 16008 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 16008
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 20:26:45,706 ERROR 16008 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 16008
+hostname: DESKTOP-0D3TES1
+
+2019-10-21 20:27:45,824 ERROR 18688 [-/::1/-/17ms GET /] nodejs.TypeError: this.ctx.helper.getRandomnum is not a function
+    at HomeController.index (E:\gits\coding-record\框架学习\egg\base-cli\app\controller\home.js:7:64)
+    at Object.callFn (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at E:\gits\coding-record\框架学习\egg\base-cli\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+
+pid: 18688
+hostname: DESKTOP-0D3TES1
+

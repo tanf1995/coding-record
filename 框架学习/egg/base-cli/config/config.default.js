@@ -7,7 +7,12 @@ exports.view = {
     }
 };
 
-exports.news = {
-    pageSize: 5,
-    serverUrl: 'https://www.easy-mock.com/mock/5cbd59f4d7610142137b4289/dev/api'
+exports.middleware = [
+    'addSuffix'
+]
+
+exports.security = {
+    csrf: {
+        enable: false
+    }
 }

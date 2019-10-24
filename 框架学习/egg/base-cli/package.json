@@ -10,6 +10,7 @@
     "egg-bin": "^4.13.0"
   },
   "scripts": {
-    "dev": "egg-bin dev"
+    "dev": "egg-bin dev",
+    "start": "egg-bin dev EGG_SERVER_ENV=prod"
   }
 }
