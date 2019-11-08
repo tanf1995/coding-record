@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@alicloud/dybaseapi": "^1.0.0",
     "egg": "^2.23.0"
   },
   "devDependencies": {
@@ -11,6 +12,7 @@
   },
   "scripts": {
     "dev": "egg-bin dev",
-    "start": "egg-bin dev EGG_SERVER_ENV=prod"
+    "start": "egg-scripts start --env=prod --title=base_cli --ignore-stderr",
+    "diy": "egg-scripts start --env=diy"
   }
 }

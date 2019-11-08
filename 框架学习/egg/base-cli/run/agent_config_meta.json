@@ -1,19 +1,6 @@
 {
   "keys": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\config\\config.default.js",
-  "view": {
-    "defaultViewEngine": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\config\\config.default.js",
-    "mapping": {
-      ".tpl": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\config\\config.default.js"
-    },
-    "root": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-view\\config\\config.default.js",
-    "cache": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-view\\config\\config.local.js",
-    "defaultExtension": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-view\\config\\config.default.js"
-  },
-  "news": {
-    "pageSize": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\config\\config.default.js",
-    "serverUrl": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\config\\config.default.js"
-  },
-  "middleware": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\config\\config.default.js",
+  "author": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\config\\config.local.js",
   "session": {
     "maxAge": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-session\\config\\config.default.js",
     "key": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-session\\config\\config.default.js",
@@ -151,6 +138,13 @@
     "buffer": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-static\\config\\config.default.js",
     "maxFiles": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-static\\config\\config.default.js"
   },
+  "view": {
+    "root": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-view\\config\\config.local.js",
+    "defaultExtension": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-view\\config\\config.default.js",
+    "defaultViewEngine": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-view\\config\\config.default.js",
+    "mapping": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg-view\\config\\config.default.js"
+  },
   "nunjucks": {
     "autoescape": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\_egg-view-nunjucks@2.2.0@egg-view-nunjucks\\config\\config.default.js",
     "throwOnUndefined": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\_egg-view-nunjucks@2.2.0@egg-view-nunjucks\\config\\config.default.js",
@@ -178,7 +172,8 @@
     },
     "scripts": {
       "dev": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
-      "start": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
+      "start": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",
+      "diy": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js"
     }
   },
   "baseDir": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli\\node_modules\\egg\\config\\config.default.js",

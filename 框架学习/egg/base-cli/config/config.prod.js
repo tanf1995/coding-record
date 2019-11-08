@@ -1,3 +1,3 @@
 module.exports = {
-  keys: 'tf'
+  author: 'prop:tf'
 }

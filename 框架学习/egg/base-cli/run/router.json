@@ -19,20 +19,8 @@
       "GET"
     ],
     "paramNames": [],
-    "path": "/news",
-    "regexp": "/^\\/news(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
-  },
-  {
-    "name": null,
-    "methods": [
-      "POST"
-    ],
-    "paramNames": [],
-    "path": "/news",
-    "regexp": "/^\\/news(?:\\/(?=$))?$/",
+    "path": "/login",
+    "regexp": "/^\\/login(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -44,8 +32,46 @@
       "GET"
     ],
     "paramNames": [],
-    "path": "/about",
-    "regexp": "/^\\/about(?:\\/(?=$))?$/",
+    "path": "/csrf-test",
+    "regexp": "/^\\/csrf-test(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/quick-transfer",
+    "regexp": "/^\\/quick-transfer(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/adv",
+    "regexp": "/^\\/adv(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/transfer-accounts",
+    "regexp": "/^\\/transfer-accounts(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]

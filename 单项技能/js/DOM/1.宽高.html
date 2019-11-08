@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box{
+      overflow: hidden;
+    }
+    .inner{
+      border: 1px solid #777;
+      width: 200px;
+      padding: 10px 20px;
+      margin: 5px 6px;
+    }
+    .rel{
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="inner">hello</div>
+  </div>
+
+  <div class="rel"></div>
+
+  <input type="text" id="num">
+  <button onclick="setHeight()">设置高度</button>
+
+  <script>
+    var box = document.querySelector('.box')
+    var relWrap = document.querySelector('.rel')
+
+    function showInfo () {
+      var keys = ['offsetHeight', 'offsetWidth']
+
+      keys.forEach(function(key) {
+        relWrap.innerHTML += `<p>${key}: ${box[key]}</p>`
+      })
+    }
+
+    function setHeight () {
+      box.style.height = document.querySelector('#num').value + 'px'
+    }
+
+    showInfo()
+  </script>
+</body>
+</html>

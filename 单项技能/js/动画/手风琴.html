@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .wrap{
+      border: 1px solid;
+    }
+    .header{
+      height: 40px;
+      line-height: 40px;
+      border: 1px dashed #aaa;
+      background-color: antiquewhite;
+    }
+    .wrap .body{
+      height: 200px;
+    }
+    .item:nth-child(1) .body{
+      background-color: orange;
+    }
+    .item:nth-child(2) .body{
+      background-color: brown;
+    }
+    .item:nth-child(3) .body{
+      background-color: #000;
+    }
+    .item.close .body{
+      height: 0
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="item close">
+      <div class="header">header</div>
+      <div class="body"></div>
+    </div>
+    <div class="item close">
+      <div class="header">header</div>
+      <div class="body"></div>
+    </div>
+    <div class="item close">
+      <div class="header">header</div>
+      <div class="body"></div>
+    </div>
+    <div class="item close">
+      <div class="header">header</div>
+      <div class="body"></div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+    $('.header').on('click', function() {
+      $(this).siblings('.body').css({ height: '200px' })
+    }) 
+  </script>
+</body>
+</html>

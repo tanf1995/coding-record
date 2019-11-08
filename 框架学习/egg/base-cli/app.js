@@ -1,7 +1,7 @@
 module.exports = app => {
   app.once('server', server => {
     console.clear()
-    console.log('server start in ' + app.config.env)
+    console.log('server author: ' + app.config.author)
   })
 
   app.on('request', ctx => {

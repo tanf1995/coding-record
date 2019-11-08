@@ -1,8 +1,8 @@
 Arguments: 
-  D:\ProgrameFiles\Node\node.exe C:\Users\tf\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add egg-bin -D
+  D:\ProgrameFiles\Node\node.exe C:\Users\tf\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add egg-scripts
 
 PATH: 
-  C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\ProgrameFiles\Node\;D:\ProgrameFiles\Git\cmd;D:\ProgrameFiles\TortoiseSVN\bin;C:\Users\tf\AppData\Local\Yarn\bin;D:\ProgrameFiles\Java\jdk1.8.0_141\bin;D:\ProgrameFiles\Java\jdk1.8.0_141\jre\bin;C:\Users\tf\AppData\Local\Microsoft\WindowsApps;;D:\ProgrameFiles\Microsoft VS Code\bin;C:\Users\tf\AppData\Roaming\npm
+  D:\ProgrameFiles\Python\Python37\Scripts\;D:\ProgrameFiles\Python\Python37\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\ProgrameFiles\Node\;D:\ProgrameFiles\Git\cmd;D:\ProgrameFiles\TortoiseSVN\bin;C:\Users\tf\AppData\Local\Yarn\bin;D:\ProgrameFiles\Java\jdk1.8.0_141\bin;D:\ProgrameFiles\Java\jdk1.8.0_141\jre\bin;D:\ProgrameFiles\MinGW\bin;C:\Users\tf\AppData\Local\Microsoft\WindowsApps;;D:\ProgrameFiles\Microsoft VS Code\bin;C:\Users\tf\AppData\Roaming\npm;D:\ProgrameFiles\Fiddler2
 
 Yarn version: 
   1.17.3
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\tf\AppData\Local\Yarn\Cache\v4\npm-nyc-13.3.0-da4dbe91a9c8b9ead3f4f3344c76f353e3c78c75\node_modules\nyc\.yarn-tarball.tgz'
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\tf\AppData\Local\Yarn\Cache\v4\npm-ms-2.0.0-5608aeadfc00be6c2901df5f9861788de0d597c8\node_modules\ms\index.js' -> 'E:\gits\coding-record\框架学习\egg\base-cli\node_modules\babel-core\node_modules\ms\index.js'
 
 npm manifest: 
   {
@@ -24,6 +24,14 @@ npm manifest:
     "license": "MIT",
     "dependencies": {
       "egg": "^2.23.0"
+    },
+    "devDependencies": {
+      "egg-bin": "^4.13.0"
+    },
+    "scripts": {
+      "dev": "egg-bin dev",
+      "start": "egg-scripts start EGG_SERVER_ENV=prod",
+      "diy": "egg-scripts start EGG_SERVER_ENV=diy"
     }
   }
 

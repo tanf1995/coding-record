@@ -176,10 +176,8 @@
       ],
       "cache": false,
       "defaultExtension": ".html",
-      "defaultViewEngine": "nunjucks",
-      "mapping": {
-        ".tpl": "nunjucks"
-      }
+      "defaultViewEngine": "",
+      "mapping": {}
     },
     "nunjucks": {
       "autoescape": true,
@@ -209,7 +207,8 @@
       },
       "scripts": {
         "dev": "egg-bin dev",
-        "start": "egg-bin dev EGG_SERVER_ENV=prod"
+        "start": "egg-scripts start --env=prod --title=base_cli --ignore-stderr",
+        "diy": "egg-scripts start --env=diy"
       }
     },
     "baseDir": "E:\\gits\\coding-record\\框架学习\\egg\\base-cli",
@@ -313,9 +312,14 @@
       "responseTimeout": 60000
     },
     "onClientError": null,
+    "author": "dev:tf",
     "middleware": [
       "addSuffix"
     ],
+    "addSuffix": {
+      "enable": false,
+      "ignore": "/not-found"
+    },
     "coreMiddlewares": "~config~coreMiddleware",
     "appMiddlewares": "~config~middleware",
     "appMiddleware": "~config~middleware",
