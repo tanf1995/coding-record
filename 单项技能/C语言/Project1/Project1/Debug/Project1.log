@@ -1,6 +1,0 @@
-﻿  2.温度转换.cpp
-E:\gits\coding-record\单项技能\C语言\Project1\Project1\2.温度转换.cpp(16,33): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-E:\gits\coding-record\单项技能\C语言\Project1\Project1\2.温度转换.cpp(28,33): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-E:\gits\coding-record\单项技能\C语言\Project1\Project1\2.温度转换.cpp(45,32): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-E:\gits\coding-record\单项技能\C语言\Project1\Project1\2.温度转换.cpp(56,32): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-  Project1.vcxproj -> E:\gits\coding-record\单项技能\C语言\Project1\Debug\Project1.exe
