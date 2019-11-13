@@ -1,3 +1,2 @@
-﻿  1.数据类型.cpp
-2.类型转换.obj : error LNK2005: _main 已经在 1.数据类型.obj 中定义
-E:\gits\coding-record\单项技能\C语言\C程序设计语言\Debug\2.基础.exe : fatal error LNK1169: 找到一个或多个多重定义的符号
+﻿  4.按位运算符.cpp
+  2.基础.vcxproj -> E:\gits\coding-record\单项技能\C语言\C程序设计语言\Debug\2.基础.exe
