@@ -17,3 +17,8 @@ yarn.lock
 
 # ps
 *.psd
+
+
+# C
+.vs/
+Debug/
