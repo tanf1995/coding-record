@@ -13,10 +13,24 @@ module.exports = appInfo => {
   const config = exports = {};
 
   // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_1566201913160_9302';
+  config.keys = appInfo.name + '_1573716104446_1006';
 
   // add your middleware config here
   config.middleware = [];
+
+  // 配置assets模板引擎
+  config.view = {
+    mapping: {
+      '.js': 'assets'
+    }
+  };
+
+  config.assets = {
+    devServer: {
+      command: 'roadhog dev',
+      port: 8000
+    }
+  };
 
   // add your user config here
   const userConfig = {

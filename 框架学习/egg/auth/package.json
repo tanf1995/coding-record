@@ -1,5 +1,5 @@
 {
-  "name": "demo1",
+  "name": "auth",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "egg": "^2.15.1",
-    "egg-scripts": "^2.11.0"
+    "egg-scripts": "^2.11.0",
+    "egg-view-assets": "^1.6.0",
+    "roadhog": "^0.6.1"
   },
   "devDependencies": {
     "autod": "^3.0.1",
@@ -23,9 +25,9 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-demo1",
-    "stop": "egg-scripts stop --title=egg-server-demo1",
-    "dev": "egg-bin dev",
+    "start": "egg-scripts start --daemon --title=egg-server-auth",
+    "stop": "egg-scripts stop --title=egg-server-auth",
+    "dev": "egg-bin dev --port 7001",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",

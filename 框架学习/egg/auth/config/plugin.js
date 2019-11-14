@@ -6,4 +6,9 @@ module.exports = {
   // static: {
   //   enable: true,
   // }
+  // 单页静态模板
+  assets: {
+    enable: true,
+    package: 'egg-view-assets'
+  }
 };
