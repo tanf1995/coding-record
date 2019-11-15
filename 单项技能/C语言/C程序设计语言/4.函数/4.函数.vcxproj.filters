@@ -15,19 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1.数据类型.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="2.类型转换.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="3.自增运算符.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="4.按位运算符.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="5.运算符.cpp">
+    <ClCompile Include="2.2计算.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

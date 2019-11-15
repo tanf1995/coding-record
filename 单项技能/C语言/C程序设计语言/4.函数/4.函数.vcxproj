@@ -19,16 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1.数据类型.cpp" />
-    <ClCompile Include="2.类型转换.cpp" />
-    <ClCompile Include="3.自增运算符.cpp" />
-    <ClCompile Include="4.按位运算符.cpp" />
-    <ClCompile Include="5.运算符.cpp" />
+    <ClCompile Include="2.2计算.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{964360BC-9FA4-444C-9824-08429D560C8F}</ProjectGuid>
-    <RootNamespace>My2基础</RootNamespace>
+    <ProjectGuid>{32AB0811-D392-48EE-9CB7-D3237073A11B}</ProjectGuid>
+    <RootNamespace>My4函数</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

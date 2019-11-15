@@ -14,6 +14,8 @@ int main() {
 	}
 	printf("\n");
 
+	free(expandStr);
+
 	return 0;
 }
 
