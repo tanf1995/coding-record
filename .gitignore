@@ -1,12 +1,16 @@
 ﻿# 
 *.mkv
 *.mp3
+*.exe
 
 # npm backpage
 node_modules/
 
 # project
 yarn.lock
+yarn-error.log
+build/
+dist/
 
 # book
 *.pdf
@@ -22,3 +26,11 @@ yarn.lock
 # C
 .vs/
 Debug/
+
+# egg
+run/
+logs/
+
+# IED
+.vscode/
+.vs/
